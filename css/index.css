@@ -2,6 +2,8 @@ li{
 		display: inline;
 		color: white;
 		text-transform: capitalize;
+        margin: 0;
+        padding: 20px;
 	}
 	ul{
 		background-color: #333;
