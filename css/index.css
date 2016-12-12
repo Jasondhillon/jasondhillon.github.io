@@ -27,4 +27,6 @@ li{
     }
     html{
         margin: 0;
+    }a{
+        text-decoration-style: none;
     }
