@@ -16,7 +16,6 @@ li{
 
 	h1{
 		font-size: 30px;
-        padding-left:30px;
 	}
 
     a{
@@ -31,4 +30,8 @@ li{
 
     html{
         margin: 0;
+    }
+    nav{
+        margin: 0;
+        padding: 0;
     }
