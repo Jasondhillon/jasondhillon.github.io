@@ -285,6 +285,9 @@ img.video{
     img.bio{
         margin-left: -180px;
     }
+    p.imgtext, p.imgsubtext, button.img{
+        margin-left: 80px;
+    }
 }
 
 footer{
