@@ -206,7 +206,7 @@ img.video{
     li.header{
         display: none;
     }
-    div.header:hover li.header{
+    div.header:focus li.header{
         display: block;
         position: relative;
         float:left;
