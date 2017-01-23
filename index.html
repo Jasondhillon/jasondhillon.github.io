@@ -22,6 +22,29 @@
       else window.addEventListener('load', loadDeferredStyles);
     </script>
 	
+	<script>
+		function preloadImages(array) {
+		    if (!preloadImages.list) {
+			preloadImages.list = [];
+		    }
+		    var list = preloadImages.list;
+		    for (var i = 0; i < array.length; i++) {
+			var img = new Image();
+			img.onload = function() {
+			    var index = list.indexOf(this);
+			    if (index !== -1) {
+				// remove image from the array once it's loaded
+				// for memory consumption reasons
+				list.splice(index, 1);
+			    }
+			}
+			list.push(img);
+			img.src = array[i];
+		    }
+		}
+
+		preloadImages(["img/3hour.jpg", "img/5hour.jpg", "img/7hour.jpg", "img/9hour.jpg", "img/aboutme.jpg", "img/facebook.svg", "img/twitter.svg", "img/googleplus.svg", "img/instagram.svg", "img/youtube.svg", "img/logo.png", "img/menu.png", "img/main.jpg", "img/video.jpg"]);
+	</script>
 <!-- NavBar -->
 <div class="header">
 		<nav>
