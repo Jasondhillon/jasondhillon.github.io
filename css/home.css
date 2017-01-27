@@ -177,6 +177,7 @@ img.bio{
     margin-right:auto;
     overflow: hidden;
     display: block;
+    
 }
 
 img.video{
@@ -344,7 +345,10 @@ br.space{
     }
 
 }
-
+@media screen and (max-width:610px){
+   img.bio{
+       width: auto;
+}
 /* Footer */
 footer{
     height:200px;
