@@ -34,6 +34,7 @@ li{
     display: inline-block;
 }
 
+/* Navbar */
 li.logo{
     float:left;
     vertical-align: middle; 
@@ -66,11 +67,14 @@ input.nav_button{
     margin-right:100px;
 }
 
+/*Splash Screen*/
 div.test{
     padding-top: 50px;
     position: relative;
     display: inline-block;
-    width:100%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
     
 }
 div.text-box{
@@ -79,6 +83,13 @@ div.text-box{
     text-align: center;    
     width: 100%;
 
+}
+
+img.main{
+    display:block;
+    overflow: hidden;
+    min-height: 600px;
+    min-width: 100%;
 }
 
 p.imgtext{
@@ -114,6 +125,7 @@ button.img{
     background-color: transparent;
 }
 
+/* Fish/Prices */
 p.fishtype{
     color: gray;
     font-weight: bold;
@@ -127,24 +139,6 @@ div.prices{
     background-color: #f7faff;
     padding-bottom: 50px;
     overflow:hidden;
-}
-
-div.bio{
-    margin-top: 20px;
-}
-p.bio{
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 200px 30px 200px;
-    min-width: 300px;
-    max-width: 1200px;
-    color:gray;
-}
-img.bio{
-    margin-left:auto;
-    margin-right:auto;
-    display: block;
 }
 
 figure{
@@ -164,41 +158,66 @@ figcaption.subtext{
     font-size: 18px;
     color: grey;
 }
+
+/* Bio */
+div.bio{
+    margin-top: 20px;
+}
+p.bio{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 200px 30px 200px;
+    min-width: 600px;
+    max-width: 1200px;
+    color:gray;
+}
+img.bio{
+    margin-left:auto;
+    margin-right:auto;
+    overflow: hidden;
+    display: block;
+}
+
 img.video{
     margin-top: -600px;
 }
-
+br.space{
+    display: none;
+}
 @media screen and (max-width:1604px){
     img.video{
     margin-top: -600px;
     }
 }
-@media screen and (max-width:1420px){
+@media screen and (max-width:1520px){
     img.main{
-        height:700px;
+        height: 600px;
+        width:unset;
     }
+
+}
+@media screen and (max-width:1420px){
     img.video{
     margin-top: -400px;
     }
 }
 @media screen and (max-width:1220px){
-    img.main{
-        height: 600px;
-    }
     img.video{
     margin-top: -350px;
     }
 }
-@media screen and (max-width:1050px){
+@media screen and (max-width:1080px){
     img.main{
         margin-left:-100px;
     }
     div.test{
-        left: -100px;
+        overflow: hidden;
     }
     div.text-box{
         bottom: 50px;
-        max-width: 400px;
+        left: -50px;
+        max-width: 600px;
     }
     input.nav_button{
         display:block;
@@ -230,8 +249,12 @@ img.video{
     }
 }
 @media screen and (max-width:973px){
+
+    img.main{
+        margin-left:-160px;
+    } 
     div.text-box{
-        bottom: 50px;
+        left: -20px;
         max-width: 400px;
     }
     
@@ -241,17 +264,17 @@ img.video{
     }
 
     img.video{
-    margin-top: -300px;
+        margin-top: -300px;
     }
     
     figure{
-        width: 100%;
+        width: 50%;
     }
 }
 @media screen and (max-width:875px){
     div.text-box{
-        left: 280px;
-        bottom: 0px;
+        left: -80px;
+        bottom: 30px;
     }
     img.main{
         margin-left: -250px;
@@ -267,26 +290,62 @@ img.video{
 @media screen and (max-width:770px){
     div.text-box{
         left: 100px;
+        max-width: 600px;
     }
     img.main{
-        margin-left: -400px;
+        margin-left: -550px;
+    }
+    br.space{
+        display: block;
+    }
+    p.imgtext{
+        text-align: center;
+    }
+    p.imgsubtext{
+        text-align: center;
+    }
+    button.img{
+        margin-left: 300px;
     }
     img.video{
     margin-top: -200px;
     }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:720px){
+    div.text-box{
+        left: 100px;
+        bottom: 80px;
+        max-width: 500px;
+    }
+    button.img{
+        margin-left: 255px;
+    }
+}
+@media screen and (max-width:610px){
+    img.main{
+        margin-left: -500px;
+    }
+    div.text-box{
+        left: -70px;
+        bottom: -10px;
+        min-width: 450px;
+    }
+    br.space{
+        display: none;
+    }
+    button.img{
+        margin-left: 230px;
+    }
+    body{
+        min-width: 470px;
+    }
     input.nav_button{
         margin-right:5px;
     }
-    img.bio{
-        margin-left: -180px;
-    }
-    p.imgtext, p.imgsubtext, button.img{
-        margin-left: 80px;
-    }
+
 }
 
+/* Footer */
 footer{
     height:200px;
     width:100%;
