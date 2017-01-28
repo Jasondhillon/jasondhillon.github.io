@@ -1,405 +1,90 @@
-body{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+body{margin:0;padding:0;overflow-x:hidden;}
+html{overflow-x:hidden;}
+a{text-decoration:none;}
+p{font-family:'Ubuntu', sans-serif;color:#333;text-align:center;}
+h1{font-family:'Ubuntu', sans-serif;text-align:center;color:#333;}
+h3{font-family:'Ubuntu', sans-serif;text-align:left;color:dodgerblue;}
+ul.header{text-align:right;height:75px;line-height:75px;margin:0px;}
+li{display:inline-block;}
+li.logo{float:left;vertical-align:middle;padding-left:75px;padding-top:5px;}
+a.header{font-family:'Ubuntu', sans-serif;color:#333;margin:30px 40px 20px 0px;}
+div.header{position:fixed;width:100%;z-index:2;background-color:white;}
+li:active a{color:dodgerblue;}
+input.nav_button{display:none;color:#333;float:right;margin-top:20px;margin-right:100px;}
+div.splash{margin-top:80px;position:relative;display:inline-block;width:100%;height:auto;overflow:hidden;background-color:black;}
+div.text-box{position:absolute;height:100%;text-align:center;width:100%;z-index:1;}
+img.main{display:block;overflow:hidden;min-height:600px;min-width:100%;opacity:.85;z-index:0;}
+p.splashtext{color:white;font-weight:bold;text-transform:uppercase;text-align:left;text-shadow:1px 1px #111;margin:0px 0px 0px 150px;padding:0px;font-size:48px;}
+p.splashsubtext{color:white;text-shadow:2px 1px #111;text-align:left;font-size:24px;margin-left:150px;}
+button.call{border-color:white;float:left;font-family:'Ubuntu', sans-serif;text-transform:uppercase;padding:10px;margin-left:150px;border-radius:3px;background-color:transparent;}
+a.call{color:white;font-size:20px;}
+p.fishtype{color:gray;font-weight:bold;}
+h1.fish{letter-spacing:5px;}
+div.prices{background-color:#f7faff;padding-bottom:50px;overflow:hidden;}
+figure{width:25%;float:left;margin:0;text-align:center;padding-bottom:20px;}
+figcaption{font-family:'Ubuntu', sans-serif;font-size:24px;color:#333;}
+figcaption.subtext{font-family:'Ubuntu', sans-serif;font-size:18px;color:grey;}
+div.bio{margin-top:20px;}
+p.bio{text-align:left;margin-left:auto;margin-right:auto;padding:0px 200px 30px 200px;max-width:1600px;color:gray;}
+img.bio{margin-left:auto;margin-right:auto;overflow:hidden;display:block;}
+img.video{margin-top:-600px;}
+br.space{display:none;}
+.blog{width:80%;}
+div.blog{margin:auto;}
+button.moreReports{border-color:dodgerblue;padding:10px;border-radius:2px;background-color:transparent;margin-bottom:20px;}
+a.reports{color:dodgerblue;}
+#mobileblog{display:none;}
+@media screen and (max-width:1604px){img.video{margin-top:-600px;}
 }
-html{
-    overflow-x: hidden;
+@media screen and (max-width:1520px){img.main{height:600px;width:unset;}
 }
-a{
-    text-decoration: none;
+@media screen and (max-width:1420px){img.video{margin-top:-400px;}
 }
-p{
-    font-family: 'Ubuntu', sans-serif;
-    color: #333;
-    text-align: center;
+@media screen and (max-width:1220px){img.video{margin-top:-350px;}
 }
-
-h1{
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    color: #333;
+@media screen and (max-width:1080px){img.main{margin-left:-100px;}
+div.splash{overflow:hidden;}
+div.text-box{bottom:50px;left:-50px;max-width:600px;}
+input.nav_button{display:block;}
+li.header{display:none;}
+div.header:hover li.header{display:block;position:relative;float:left;text-align:left;top:40px;padding:10px 0px 10px 20px;outline:2px #333 solid;border-collapse:collapse;background-color:white;width:100%;}
+ul.header{padding-left:0px;line-height:unset;}
+li.logo{padding-top:15px;}
+img.video{margin-top:-300px;}
 }
-
-h3{
-    font-family: 'Ubuntu', sans-serif;
-    text-align: left;
-    color: dodgerblue;
+@media screen and (max-width:973px){img.main{margin-left:-160px;}
+div.text-box{left:-20px;max-width:400px;}
+p.bio{padding-left:100px;padding-right:100px;}
+img.video{margin-top:-300px;}
+figure{width:50%;}
 }
-ul.header{
-    text-align: right;
-    height: 75px;
-    line-height: 75px;
-    margin: 0px;
+@media screen and (max-width:875px){div.text-box{left:-80px;bottom:60px;}
+img.main{margin-left:-250px;}
+p.bio{padding-left:20px;padding-right:20px;}
+img.video{margin-top:-200px;}
 }
-
-li{
-    display: inline-block;
+@media screen and (max-width:770px){div.text-box{left:100px;max-width:600px;}
+img.main{margin-left:-550px;}
+br.space{display:block;}
+p.splashtext{text-align:center;}
+p.splashsubtext{text-align:center;}
+button.call{margin-left:300px;}
+img.video{margin-top:-200px;}
 }
-
-/* Navbar */
-li.logo{
-    float:left;
-    vertical-align: middle; 
-    padding-left:75px; 
-    padding-top:5px;
+@media screen and (max-width:720px){div.text-box{left:100px;bottom:110px;max-width:500px;}
+button.call{margin-left:255px;}
+#normalblog{display:none;}
+#mobileblog{display:block;}
 }
-a.header{
-    font-family: 'Ubuntu', sans-serif;
-    color: #333;
-    margin: 30px 40px 20px 0px;
+@media screen and (max-width:610px){img.main{margin-left:-550px;}
+div.text-box{left:-120px;bottom:20px;min-width:450px;}
+br.space{display:none;}
+button.call{margin-left:220px;}
+input.nav_button{margin-right:5px;}
 }
-
-div.header{
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    background-color: white;
-
+@media screen and (max-width:610px){img.bio{width:100%;height:100%;}
+li.logo{padding-left:20px;}
 }
-
-li:active a{
-    color: dodgerblue; 
-}
-
-input.nav_button{
-    display: none;
-    color: #333;
-    float:right;
-    margin-top: 20px;
-    margin-right:100px;
-}
-
-/*Splash Screen*/
-div.splash{
-    margin-top: 80px;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    background-color: black;
-    
-}
-div.text-box{
-    position: absolute;   
-    height: 100%;
-    text-align: center;    
-    width: 100%;
-    z-index: 1;
-
-}
-img.main{
-    display:block;
-    overflow: hidden;
-    min-height: 600px;
-    min-width: 100%;
-    opacity: .85;
-    z-index: 0;
-}
-
-p.splashtext{
-    color:white;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: left;
-    text-shadow: 1px 1px #111;
-    margin: 0px 0px 0px 150px;
-    padding: 0px;
-    font-size: 48px;
-
-}
-p.splashsubtext{
-    color:white;
-    text-shadow: 2px 1px #111;
-    text-align: left;
-    font-size: 24px;
-    margin-left: 150px;
-}
-button.call{
-    border-color: white;
-    float: left;
-    font-family: 'Ubuntu', sans-serif;
-    text-transform: uppercase;
-    padding: 10px;
-    margin-left: 150px;
-    border-radius: 3px;
-    background-color: transparent;
-}
-a.call{
-    color: white;
-    font-size: 20px;
-}
-
-/* Fish/Prices */
-p.fishtype{
-    color: gray;
-    font-weight: bold;
-}
-
-h1.fish{
-    letter-spacing: 5px;
-}
-
-div.prices{
-    background-color: #f7faff;
-    padding-bottom: 50px;
-    overflow:hidden;
-}
-
-figure{
-    width: 25%;
-    float: left;
-    margin: 0;
-    text-align: center;
-    padding-bottom: 20px;
-}
-figcaption{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
-    color: #333;
-}
-figcaption.subtext{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 18px;
-    color: grey;
-}
-
-/* Bio */
-div.bio{
-    margin-top: 20px;
-}
-p.bio{
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 200px 30px 200px;
-    max-width: 1600px;
-    color:gray;
-}
-img.bio{
-    margin-left:auto;
-    margin-right:auto;
-    overflow: hidden;
-    display: block;
-}
-
-img.video{
-    margin-top: -600px;
-}
-br.space{
-    display: none;
-}
-
-/* Blog*/
-.blog{
-    width: 80%;
-}
-div.blog{
-    margin:auto;
-}
-button.moreReports{
-    border-color: dodgerblue;
-    padding:10px; 
-    border-radius: 2px; 
-    background-color: transparent; 
-    margin-bottom:20px;
-}
-a.reports{
-    color: dodgerblue;
-}
-
-#mobileblog{
-    display: none;
-}
-@media screen and (max-width:1604px){
-    img.video{
-    margin-top: -600px;
-    }
-}
-@media screen and (max-width:1520px){
-    img.main{
-        height: 600px;
-        width:unset;
-    }
-
-}
-@media screen and (max-width:1420px){
-    img.video{
-    margin-top: -400px;
-    }
-}
-@media screen and (max-width:1220px){
-    img.video{
-    margin-top: -350px;
-    }
-}
-@media screen and (max-width:1080px){
-    img.main{
-        margin-left:-100px;
-    }
-    div.splash{
-        overflow: hidden;
-    }
-    div.text-box{
-        bottom: 50px;
-        left: -50px;
-        max-width: 600px;
-    }
-    input.nav_button{
-        display:block;
-    }
-    li.header{
-        display: none;
-    }
-    div.header:hover li.header{
-        display: block;
-        position: relative;
-        float:left;
-        text-align: left;
-        top:40px;
-        padding: 10px 0px 10px 20px;
-        outline: 2px #333 solid;
-        border-collapse: collapse;
-        background-color: white;
-        width: 100%;
-    }
-    ul.header{
-        padding-left:0px;
-        line-height: unset;
-    }
-    li.logo{
-        padding-top:15px;
-    }
-    img.video{
-    margin-top: -300px;
-    }
-}
-@media screen and (max-width:973px){
-
-    img.main{
-        margin-left:-160px;
-    } 
-    div.text-box{
-        left: -20px;
-        max-width: 400px;
-    }
-    
-    p.bio{
-        padding-left:100px;
-        padding-right: 100px;
-    }
-
-    img.video{
-        margin-top: -300px;
-    }
-    
-    figure{
-        width: 50%;
-    }
-}
-@media screen and (max-width:875px){
-    div.text-box{
-        left: -80px;
-        bottom: 60px;
-    }
-    img.main{
-        margin-left: -250px;
-    }
-    p.bio{
-        padding-left:20px;
-        padding-right: 20px;
-    }
-    img.video{
-    margin-top: -200px;
-    }
-}
-@media screen and (max-width:770px){
-    div.text-box{
-        left: 100px;
-        max-width: 600px;
-    }
-    img.main{
-        margin-left: -550px;
-    }
-    br.space{
-        display: block;
-    }
-    p.splashtext{
-        text-align: center;
-    }
-    p.splashsubtext{
-        text-align: center;
-    }
-    button.call{
-        margin-left: 300px;
-    }
-    img.video{
-    margin-top: -200px;
-    }
-}
-@media screen and (max-width:720px){
-    div.text-box{
-        left: 100px;
-        bottom: 110px;
-        max-width: 500px;
-    }
-    button.call{
-        margin-left: 255px;
-    }
-
-    #normalblog{
-        display:none;
-    }
-    #mobileblog{
-        display:block;
-    }
-}
-@media screen and (max-width:610px){
-    img.main{
-        margin-left: -550px;
-    }
-    div.text-box{
-        left: -120px;
-        bottom: 20px;
-        min-width: 450px;
-    }
-    br.space{
-        display: none;
-    }
-    button.call{
-        margin-left: 220px;
-    }
-    input.nav_button{
-        margin-right:5px;
-    }
-
-}
-@media screen and (max-width:610px){
-   img.bio{
-       width: 100%;
-       height: 100%;
-    }
-    li.logo{
-        padding-left: 20px;
-    }
-}
-/* Footer */
-footer{
-    height:200px;
-    width:100%;
-    background-color: #111;
-    text-align: center;
-}
-
-p.footer{
-    padding-top: 50px;
-    color: white;
-    font-weight: bold;
-}
-
-ul.footer{
-    display: inline;
-    list-style: none;
-    padding-right: 50px;
-}
+footer{height:200px;width:100%;background-color:#111;text-align:center;}
+p.footer{padding-top:50px;color:white;font-weight:bold;}
+ul.footer{display:inline;list-style:none;padding-right:50px;}
