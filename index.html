@@ -5,27 +5,176 @@
 		 1/23/17
 		 Test site for learning -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/home.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<style>
+		body{
+    		margin: 0;
+    		padding: 0;
+   			overflow-x: hidden;
+		}
+		html{
+			overflow-x: hidden;
+		}
+		a{
+			text-decoration: none;
+		}
+		p{
+			font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			text-align: center;
+		}
 
-   <noscript id="deferred-styles">
-    	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    </noscript>
+		h1{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: center;
+			color: #333;
+		}
 
-    <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script>
+		h3{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: left;
+			color: dodgerblue;
+		}
+		ul.header{
+			text-align: right;
+			height: 75px;
+			line-height: 75px;
+			margin: 0px;
+		}
+
+		li{
+			display: inline-block;
+		}
+
+		/* Navbar */
+		li.logo{
+			float:left;
+			vertical-align: middle; 
+			padding-left:75px; 
+			padding-top:5px;
+		}
+		a.header{
+			font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			margin: 30px 40px 20px 0px;
+		}
+
+		div.header{
+			position: fixed;
+			width: 100%;
+			z-index: 2;
+			background-color: white;
+
+		}
+
+		li:active a{
+			color: dodgerblue; 
+		}
+
+		input.nav_button{
+			display: none;
+			color: #333;
+			float:right;
+			margin-top: 20px;
+			margin-right:100px;
+		}
+
+		/*Splash Screen*/
+		div.splash{
+			margin-top: 80px;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			background-color: black;
+			
+		}
+		div.text-box{
+			position: absolute;   
+			height: 100%;
+			text-align: center;    
+			width: 100%;
+			z-index: 1;
+
+		}
+		img.main{
+			display:block;
+			overflow: hidden;
+			min-height: 600px;
+			min-width: 100%;
+			opacity: .85;
+			z-index: 0;
+		}
+
+		p.splashtext{
+			color:white;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: left;
+			text-shadow: 1px 1px #111;
+			margin: 0px 0px 0px 150px;
+			padding: 0px;
+			font-size: 48px;
+
+		}
+		p.splashsubtext{
+			color:white;
+			text-shadow: 2px 1px #111;
+			text-align: left;
+			font-size: 24px;
+			margin-left: 150px;
+		}
+		button.call{
+			border-color: white;
+			float: left;
+			font-family: 'Ubuntu', sans-serif;
+			text-transform: uppercase;
+			padding: 10px;
+			margin-left: 150px;
+			border-radius: 3px;
+			background-color: transparent;
+		}
+		a.call{
+			color: white;
+			font-size: 20px;
+		}
+
+		/* Fish/Prices */
+		p.fishtype{
+			color: gray;
+			font-weight: bold;
+		}
+
+		h1.fish{
+			letter-spacing: 5px;
+		}
+
+		div.prices{
+			background-color: #f7faff;
+			padding-bottom: 50px;
+			overflow:hidden;
+		}
+
+		figure{
+			width: 25%;
+			float: left;
+			margin: 0;
+			text-align: center;
+			padding-bottom: 20px;
+		}
+		figcaption{
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 24px;
+			color: #333;
+		}
+		figcaption.subtext{
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 18px;
+			color: grey;
+		}
+	</style>
 
 	<script>
 		function preloadImages(array) {
@@ -49,6 +198,26 @@
 		}
 		preloadImages(["img/menu.png","img/logo.png", "img/main.jpg", "img/3hour.jpg", "img/5hour.jpg", "img/7hour.jpg", "img/9hour.jpg", "img/aboutme.jpg", "img/facebook.svg", "img/twitter.svg", "img/googleplus.svg", "img/instagram.svg", "img/youtube.svg", "img/video.jpg"]);
 	</script>
+
+	<noscript id="deferred-styles">
+    	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+		<link href="css/home.css" rel="stylesheet" type="text/css">
+    </noscript>
+
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
 
 <!-- NavBar -->
 <div class="header">
