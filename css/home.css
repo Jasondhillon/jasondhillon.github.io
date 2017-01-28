@@ -6,6 +6,9 @@ body{
 html{
     overflow-x: hidden;
 }
+a{
+    text-decoration: none;
+}
 p{
     font-family: 'Ubuntu', sans-serif;
     color: #333;
@@ -42,7 +45,6 @@ li.logo{
     padding-top:5px;
 }
 a.header{
-    text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
     color: #333;
     margin: 30px 40px 20px 0px;
@@ -51,8 +53,9 @@ a.header{
 div.header{
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
+
 }
 
 li:active a{
@@ -68,13 +71,14 @@ input.nav_button{
 }
 
 /*Splash Screen*/
-div.test{
-    padding-top: 50px;
+div.splash{
+    margin-top: 80px;
     position: relative;
     display: inline-block;
     width: 100%;
     height: auto;
     overflow: hidden;
+    background-color: black;
     
 }
 div.text-box{
@@ -82,17 +86,19 @@ div.text-box{
     height: 100%;
     text-align: center;    
     width: 100%;
+    z-index: 1;
 
 }
-
 img.main{
     display:block;
     overflow: hidden;
     min-height: 600px;
     min-width: 100%;
+    opacity: .85;
+    z-index: 0;
 }
 
-p.imgtext{
+p.splashtext{
     color:white;
     font-weight: bold;
     text-transform: uppercase;
@@ -103,18 +109,14 @@ p.imgtext{
     font-size: 48px;
 
 }
-p.imgsubtext{
+p.splashsubtext{
     color:white;
     text-shadow: 2px 1px #111;
     text-align: left;
     font-size: 24px;
     margin-left: 150px;
 }
-
-
-button.img{
-    color: white;
-    font-size: 20px;
+button.call{
     border-color: white;
     float: left;
     font-family: 'Ubuntu', sans-serif;
@@ -123,6 +125,10 @@ button.img{
     margin-left: 150px;
     border-radius: 3px;
     background-color: transparent;
+}
+a.call{
+    color: white;
+    font-size: 20px;
 }
 
 /* Fish/Prices */
@@ -168,7 +174,7 @@ p.bio{
     margin-left: auto;
     margin-right: auto;
     padding: 0px 200px 30px 200px;
-    max-width: 1200px;
+    max-width: 1600px;
     color:gray;
 }
 img.bio{
@@ -176,7 +182,6 @@ img.bio{
     margin-right:auto;
     overflow: hidden;
     display: block;
-    
 }
 
 img.video{
@@ -185,6 +190,25 @@ img.video{
 br.space{
     display: none;
 }
+
+/* Blog*/
+.blog{
+    width: 80%;
+}
+div.blog{
+    margin:auto;
+}
+button.moreReports{
+    border-color: dodgerblue;
+    padding:10px; 
+    border-radius: 2px; 
+    background-color: transparent; 
+    margin-bottom:20px;
+}
+a.reports{
+    color: dodgerblue;
+}
+
 @media screen and (max-width:1604px){
     img.video{
     margin-top: -600px;
@@ -211,7 +235,7 @@ br.space{
     img.main{
         margin-left:-100px;
     }
-    div.test{
+    div.splash{
         overflow: hidden;
     }
     div.text-box{
@@ -274,7 +298,7 @@ br.space{
 @media screen and (max-width:875px){
     div.text-box{
         left: -80px;
-        bottom: 30px;
+        bottom: 60px;
     }
     img.main{
         margin-left: -250px;
@@ -298,13 +322,13 @@ br.space{
     br.space{
         display: block;
     }
-    p.imgtext{
+    p.splashtext{
         text-align: center;
     }
-    p.imgsubtext{
+    p.splashsubtext{
         text-align: center;
     }
-    button.img{
+    button.call{
         margin-left: 300px;
     }
     img.video{
@@ -314,10 +338,10 @@ br.space{
 @media screen and (max-width:720px){
     div.text-box{
         left: 100px;
-        bottom: 80px;
+        bottom: 110px;
         max-width: 500px;
     }
-    button.img{
+    button.call{
         margin-left: 255px;
     }
 }
@@ -327,13 +351,13 @@ br.space{
     }
     div.text-box{
         left: -120px;
-        bottom: -10px;
+        bottom: 20px;
         min-width: 450px;
     }
     br.space{
         display: none;
     }
-    button.img{
+    button.call{
         margin-left: 220px;
     }
     input.nav_button{
