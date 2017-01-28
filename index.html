@@ -9,6 +9,24 @@
 </head>
 <body>
 
+   <noscript id="deferred-styles">
+    	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    </noscript>
+
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
 	<script>
 		function preloadImages(array) {
 		    if (!preloadImages.list) {
@@ -31,25 +49,6 @@
 		}
 		preloadImages(["img/menu.png","img/logo.png", "img/main.jpg", "img/3hour.jpg", "img/5hour.jpg", "img/7hour.jpg", "img/9hour.jpg", "img/aboutme.jpg", "img/facebook.svg", "img/twitter.svg", "img/googleplus.svg", "img/instagram.svg", "img/youtube.svg", "img/video.jpg"]);
 	</script>
-
-	<noscript id="deferred-styles">
-    	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    </noscript>
-
-    <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-    </script>
-
 
 <!-- NavBar -->
 <div class="header">
