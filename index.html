@@ -5,8 +5,155 @@
 		 1/23/17
 		 Test site for learning -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FlatAddicted</title>
 </head>
+
 <body>
+
+<!-- Style -->
+<div>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+		html{
+			overflow-x: hidden;
+		}
+		a{
+			text-decoration: none;
+			color: #333;
+		}
+		p{
+			font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			text-align: center;
+		}
+
+		h1{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: center;
+			color: #333;
+		}
+
+		h3, h4{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: left;
+			color: dodgerblue;
+		}
+
+		h4{
+			color: gray;
+		}
+
+		ul.header{
+			text-align: right;
+			height: 75px;
+			line-height: 75px;
+			margin: 0px;
+		}
+
+		li{
+			display: inline-block;
+		}
+
+		/* Navbar */
+		li.logo{
+			float:left;
+			vertical-align: middle; 
+			padding-left:75px; 
+			padding-top:5px;
+		}
+		a.header{
+			font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			margin: 30px 40px 20px 0px;
+		}
+
+		div.header{
+			position: fixed;
+			width: 100%;
+			z-index: 2;
+		}
+
+		li:active a{
+			color: dodgerblue; 
+		}
+
+		input.nav_button{
+			display: none;
+			color: #333;
+			float:right;
+			margin-top: 20px;
+			margin-right:100px;
+		}
+
+		/*Splash Screen*/
+		div.splash{
+			margin-top: 80px;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			background-color: black;
+			
+		}
+		div.text-box{
+			position: absolute;   
+			height: 100%;
+			text-align: center;    
+			width: 100%;
+			z-index: 1;
+
+		}
+		img.main{
+			display:block;
+			overflow: hidden;
+			min-height: 600px;
+			min-width: 100%;
+			opacity: .85;
+			z-index: 0;
+		}
+
+		p.splashtext{
+			color:white;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: left;
+			text-shadow: 1px 1px #111;
+			margin: 0px 0px 0px 150px;
+			padding: 0px;
+			font-size: 48px;
+
+		}
+		p.splashsubtext{
+			color:white;
+			text-shadow: 2px 1px #111;
+			text-align: left;
+			font-size: 24px;
+			margin-left: 150px;
+		}
+		button.call{
+			border-color: white;
+			float: left;
+			font-family: 'Ubuntu', sans-serif;
+			text-transform: uppercase;
+			padding: 10px;
+			margin-left: 150px;
+			border-radius: 3px;
+			background-color: transparent;
+		}
+		a.call{
+			color: white;
+			font-size: 20px;
+		}
+	</style>
+</div>
+
+<!-- Scripts -->
+<div>
 	<style>
 		body{
     		margin: 0;
@@ -217,7 +364,7 @@
       if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
       else window.addEventListener('load', loadDeferredStyles);
     </script>
-
+</div>
 
 <!-- NavBar -->
 <div class="header">
@@ -296,7 +443,7 @@
 
 <!-- Video -->
 <div>
-	<center><iframe width="100%" height="400px" src="https://www.youtube.com/embed/OxSN03L93Co" frameborder="0" allowfullscreen></iframe></center>
+	<center><iframe width="80%" height="400px" src="https://www.youtube.com/embed/OxSN03L93Co" frameborder="0" allowfullscreen></iframe></center>
 </div>
 
 <!-- Blog -->
@@ -436,7 +583,52 @@
 </div>
 
 <!-- Contact Form -->
-<div>
+<div style="position: relative; padding-top: 50px; background-color: #f7faff;">
+	<h4 style="text-align: center;">I'D LOVE TO HEAR FROM YOU</h3>
+	<h1 style="letter-spacing: 3px">CONTACT ME ANY TIME</h1>
+	<br>
+	<h4 style="text-align: center;">Lets Go Fishing!</h3>
+	
+	
+
+	<table style="margin-left: 200px; width:100%">
+		<tr>
+			<td style="width: 50%;">
+				<form action="mail.php" method="post">
+					<label for="name">NAME</label>
+					<input id="name" type="text" required name="name">
+
+					<label for="email">YOUR EMAIL</label>
+					<input id="email" type="text" required name="email">
+
+					<label for="phone">YOUR PHONE</label>
+					<input id="phone" type="text" required name="phone">
+
+					<label for="subject">SUBJECT</label>
+					<input id="subject" type="text" required name="subject">
+			
+					<br>
+					<label for="message">YOUR MESSAGE</label>
+					<textarea id="message" name="message" cols="25" rows="5"></textarea>
+
+					<input type="submit" name="submit" value="Submit">
+
+				</form>
+			</td>
+
+			<td style="width: 50%;">
+				<div;>
+					<h1 style="text-align: unset">Hours of Operation:</h1>
+					<h4>Through Sunday open 6am to 10pm</h4>
+					<br>
+					<h1 style="text-align: unset">Business Information:</h1>
+					<h4><img id="icon" src="img/location.png">1103 Garden ST. Titusville FL, 32796</h4>
+					<h4><img id="icon" src="img/phone.png">1-407-432-5138</h4>
+					<h4><img id="icon" src="img/mail.png"><a style="text-decoration: underline; color:dodgerblue" href="mailto:flataddicted@gmail.com">flataddicted@gmail.com</a></h4>
+				</div>
+			</td>
+		</tr>
+	</table>
 </div>
 
 <!-- Footer -->
