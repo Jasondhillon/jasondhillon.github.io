@@ -1,4 +1,144 @@
 
+body{
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+	html{
+			overflow-x: hidden;
+		}
+	a{
+			text-decoration: none;
+			color: #333;
+		}
+	p{
+	    	font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			text-align: center;
+	}
+
+	h1{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: center;
+			color: #333;
+	}
+
+	h3, h4{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: left;
+			color: dodgerblue;
+	}
+
+	h4{
+			color: gray;
+	}
+
+	ul.header{
+			text-align: right;
+			height: 75px;
+			line-height: 75px;
+			margin: 0px;
+	}
+
+	li{
+			display: inline-block;
+	}
+
+/* Navbar */
+	li.logo{
+			float:left;
+			vertical-align: middle; 
+			padding-left:75px; 
+			padding-top:5px;
+	}
+	a.header{
+			font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			margin: 30px 40px 20px 0px;
+	}
+
+	div.header{
+			position: fixed;
+			width: 100%;
+			z-index: 2;
+			background-color: white;
+	}
+
+	li:active a{
+			color: dodgerblue; 
+	}
+
+	input.nav_button{
+			display: none;
+			color: #333;
+			float:right;
+			margin-top: 20px;
+			margin-right:100px;
+			background-color: white;
+	}
+
+/*Splash Screen*/
+
+	div.splash{
+			margin-top: 80px;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			background-color: black;
+			
+	}
+	div.text-box{
+			position: absolute;   
+			height: 100%;
+			text-align: center;    
+			width: 100%;
+			z-index: 1;
+
+	}
+	img.main{
+			display:block;
+			overflow: hidden;
+			min-height: 600px;
+			min-width: 100%;
+			opacity: .85;
+			z-index: 0;
+	}
+
+	p.splashtext{
+			color:white;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: left;
+			text-shadow: 1px 1px #111;
+			margin: 0px 0px 0px 150px;
+			padding: 0px;
+			font-size: 48px;
+
+	}
+	p.splashsubtext{
+			color:white;
+			text-shadow: 2px 1px #111;
+			text-align: left;
+			font-size: 24px;
+			margin-left: 150px;
+	}
+	button.call{
+			border-color: white;
+			float: left;
+			font-family: 'Ubuntu', sans-serif;
+			text-transform: uppercase;
+			padding: 10px;
+			margin-left: 150px;
+			border-radius: 3px;
+			background-color: transparent;
+    }
+	a.call{
+			color: white;
+			font-size: 20px;
+}
+
 /* Fish/Prices */
 p.fishtype{
     color: gray;
@@ -81,6 +221,10 @@ a.reports{
     display: none;
 }
 
+table{
+     margin: 0 auto;
+}
+
 /* Contact Form */
 label{
     font-family: 'Ubuntu', sans-serif;
@@ -100,6 +244,14 @@ input, textarea{
 #icon{
     padding-right: 20px;
 }
+
+#contact_mobile{
+    display: none;
+}
+#contact_pc{
+    padding-left: 200px;
+}
+
 @media screen and (max-width:1604px){
     img.video{
     margin-top: -600px;
@@ -185,6 +337,7 @@ input, textarea{
     figure{
         width: 50%;
     }
+
 }
 @media screen and (max-width:875px){
     div.text-box{
@@ -202,6 +355,9 @@ input, textarea{
     margin-top: -200px;
     }
 
+    #contact_pc{
+        padding-left: 50px;
+    }
 }
 @media screen and (max-width:770px){
     div.text-box{
@@ -229,6 +385,25 @@ input, textarea{
     figure{
         width:100%;
     }
+
+    #normalblog{
+        display:none;
+    }
+    #mobileblog{
+        display:block;
+    }
+    #contact_pc{
+        display: none;
+    }
+
+    #contact_mobile{
+        display: block;
+
+    }
+    ul.footer{
+        padding-right:0px;
+    }
+
 }
 @media screen and (max-width:720px){
     div.text-box{
@@ -238,13 +413,6 @@ input, textarea{
     }
     button.call{
         margin-left: 255px;
-    }
-
-    #normalblog{
-        display:none;
-    }
-    #mobileblog{
-        display:block;
     }
 }
 @media screen and (max-width:610px){
@@ -278,10 +446,10 @@ input, textarea{
 }
 /* Footer */
 footer{
-    height:200px;
     width:100%;
     background-color: #111;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 p.footer{
@@ -294,4 +462,7 @@ ul.footer{
     display: inline;
     list-style: none;
     padding-right: 50px;
+}
+li.footer{
+    display: block;
 }
