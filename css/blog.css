@@ -15,7 +15,7 @@ body{
 	    	font-family: 'Ubuntu', sans-serif;
 			color: #333;
 			text-align: left;
-            padding-left: 80px;
+            padding-left: 20px;
             max-width:1500px;
 	}
 
@@ -23,14 +23,13 @@ body{
 			font-family: 'Ubuntu', sans-serif;
 			text-align: center;
 			color: #333;
-            padding-left: 80px;
 	}
 
 	h3, h4{
 			font-family: 'Ubuntu', sans-serif;
 			text-align: left;
 			color: dodgerblue;
-            padding-left: 80px;
+            
 	}
 
 	h4{
@@ -206,10 +205,12 @@ footer{
 }
 
 p.footer{
-    padding-top: 50px;
+    padding: 50px 0 20px 0;
+    margin: 0 auto;
     color: white;
     font-weight: bold;
     text-align: center;
+    width: 150px;
 }
 
 ul.footer{
@@ -219,4 +220,19 @@ ul.footer{
 }
 li.footer{
     display: block;
+}
+
+td{
+    padding-right: 50px;
+}
+
+table{
+    border-spacing: 20px;
+}
+td.td2{
+    background-color: #f0f0f0;
+    max-width: 800px;
+    padding-right: 0;
+    margin-bottom: 100px;
+
 }

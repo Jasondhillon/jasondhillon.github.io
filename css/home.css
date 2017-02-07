@@ -150,7 +150,7 @@ h1.fish{
 }
 
 div.prices{
-    background-color: #f7faff;
+    background-color: #f0f0f0;
     padding-bottom: 50px;
     overflow:hidden;
 }
@@ -239,7 +239,7 @@ input, textarea{
     padding: 10px;
     display: block;
     border: none;
-    background-color: #eaf2ff
+    background-color: #f0f0f0;
 }
 #icon{
     padding-right: 20px;

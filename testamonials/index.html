@@ -5,13 +5,15 @@
 		 1/23/17
 		 Test site for learning -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../css/blog.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	
-<noscript id="deferred-styles">
-      <link href="https://fonts.googleapis.com/css?family=Oswald|Ubuntu" rel="stylesheet">
-	<link href="css/home.css" rel="stylesheet" type="text/css">
+
+<div>
+	<noscript id="deferred-styles">
+      	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     </noscript>
+
     <script>
       var loadDeferredStyles = function() {
         var addStylesNode = document.getElementById("deferred-styles");
@@ -25,215 +27,388 @@
       if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
       else window.addEventListener('load', loadDeferredStyles);
     </script>
-	
-	<script>
-		function preloadImages(array) {
-		    if (!preloadImages.list) {
-			preloadImages.list = [];
-		    }
-		    var list = preloadImages.list;
-		    for (var i = 0; i < array.length; i++) {
-			var img = new Image();
-			img.onload = function() {
-			    var index = list.indexOf(this);
-			    if (index !== -1) {
-				// remove image from the array once it's loaded
-				// for memory consumption reasons
-				list.splice(index, 1);
-			    }
-			}
-			list.push(img);
-			img.src = array[i];
-		    }
-		}
-		preloadImages(["img/3hour.jpg", "img/5hour.jpg", "img/7hour.jpg", "img/9hour.jpg", "img/aboutme.jpg", "img/facebook.svg", "img/twitter.svg", "img/googleplus.svg", "img/instagram.svg", "img/youtube.svg", "img/logo.png", "img/menu.png", "img/main.jpg", "img/video.jpg"]);
-</script>
+</div>
 
 <!-- NavBar -->
 <div class="header">
 		<nav>
-			<input class="nav_button" type="image" src="img/menu.png" width="25px" height="20px"/>
+			<input class="nav_button" type="image" src="../img/menu.png" width="25px" height="20px"/>
 			<ul class="header">
 				<li class="logo">
-					<img src="img/logo.png"/></li>
-				<li class="header"><a class="header" href="index.html">Home Page</a></li> 
-				<li class="header"><a class="header" href="fishingreports/index.html">Fishing Reports</a></li>
-				<li class="header"><a class="header" href="rates/index.html">Rates/Location</a></li>
-				<li class="header"><a class="header" href="photogallery/index.html">Photo Gallery</a></li>
-				<li class="header"><a class="header" href="testamonials/index.html">Testamonials</a></li>
+					<img src="../img/logo.png"/></li>
+				<li class="header"><a class="header" href="../index.html">Home Page</a></li> 
+				<li class="header"><a class="header" href="index.html">Fishing Reports</a></li>
+				<li class="header"><a class="header" href="../rates/index.html">Rates/Location</a></li>
+				<li class="header"><a class="header" href="../photogallery/index.html">Photo Gallery</a></li>
+				<li class="header"><a class="header" href="../testamonials/index.html">Testamonials</a></li>
 			</ul>
 		</nav>
 </div>
 
-<!-- Splash Screen -->
-<div class="splash">
-	<div class="text-box">
-		<p class="splashtext" style="margin-top: 180px;">Orlando Fishing</p>
-		<p class="splashtext">Charters</p>
-		<br class="space"><br class="space"><br class="space"><br class="space">
-		<p class="splashsubtext">ONLY <b>$149 per person</b> For A Limited Time</p>
-		<button class="call"><a class="call" href="tel:1-407-432-5138">CALL TODAY</a></button>
-	</div>
-	<img class="main" src="img/main.jpg" width="100%"/>
-</div>
-
-<!-- Prices -->
-<div class="prices">
-	<p class="fishtype" style="padding: 30px">REDFISH - TARPON - SEA TROUT - SNOOK</p>
-	<h1 class="fish">MOSQUITO LAGOON</h1>
-	<p style="padding: 30px">Just 45 minutes <b>From Orlando Florida</b> and all the major theme parks</p>
-
-	<div style="display: inline;">
-		<figure>
-			<img src="img/3hour.jpg" width="245px" height="163px">
-			<figcaption>3 Hour Adventure</figcaption>
-			<figcaption class="subtext">Only $149</figcaption>
-		</figure>
-		<figure>
-			<img src="img/5hour.jpg" width="245px" height="163px">
-			<figcaption>5 Hour Adventure</figcaption>
-			<figcaption class="subtext">Only $179</figcaption>
-		</figure>
-		<figure>
-			<img src="img/7hour.jpg" width="245px" height="163px">
-			<figcaption>7 Hour Adventure</figcaption>
-			<figcaption class="subtext">Only $209</figcaption>
-		</figure>
-		<figure>
-			<img src="img/9hour.jpg" width="245px" height="163px">
-			<figcaption>9 Hour Adventure</figcaption>
-			<figcaption class="subtext">Only $239</figcaption>
-		</figure>
-	</div>
-</div>
-
-<!-- Bio -->
-<div class="bio">
-	<h1 style="text-transform: uppercase; letter-spacing: 5px;">Captain Tom Carver</h1>
-	<p style="text-transform: capitalize; color:gray; font-size: 18px;">US coast guard licensed and commercially insured</p>
-	<img class="bio" src="img/aboutme.jpg" width="700px" height="450px">
-	<p class="bio"><b>ORLANDO SALTWATER FISHING</b></p>
-	<p class="bio">Orlando Fishing Charters
-
-	 are just a short drive from the area attractions, visitors can find some of the best fishing in the state, not to mention the best Red fishing in the World. This area of Central Florida offers both beginners and expert anglers the opportunity to catch record sized
-		Redfish, Sea Trout, Snook, Tarpon and more. You’re sure to see “tailing” Redfish, Snook hiding in mangroves, rolling Tarpon, Sea Trout, as well as Dolphins, Manatees and many other animals in their natural environment. Redfish, one of the more popular fish species in the area, and one that most anglers and fishing guides target. They are exceptional fighters and can be caught year round. Also known as Red Drum, these fish can exceed forty plus pounds during the summer when they gather and spawn. During the winter months, Redfish catches normally run in the three to twelve pound range. Fishing guides can catch numerous Redfish per charter, and stories of one hundred Redfish per day is not unheard of. The crystal clear, gin like color of the water during the winter makes sight fishing, and finding fish much easier for the trained and untrained eye. Flataddicted will give both beginners and expert anglers an opportunity to sight cast in shallow waters to all the area has to offer. Fishing the waters near Orlando are the best-kept secrets in the shallow water fishing arena. Whether you are in town for a vacation or a convention this is a one-of-a-kind experience you are sure to never forget. By booking a trip with Flataddicted, we will make sure the trip is a success every time out. From a friendly voice on the phone to a full time guide on the water 250 days a year. Flataddicted is the best choice for your day out on the water. Flataddicted has been featured in many fishing magazines and numerous times on ESPN radio. Guided television celebrities and appeared on several nationally televised fishing shows. Make no mistake you have found the hardest working and most energetic guide on the water.</p>
-
-
-
-
-	<br>
-</div>
-
-<!-- Video -->
-<div>
-	<center><iframe width="100%" height="400px" src="https://www.youtube.com/embed/OxSN03L93Co" frameborder="0" allowfullscreen></iframe></center>
-</div>
-
-<!-- Fishing Blog -->
-<div>
-	<h1>LATEST FISHING REPORTS</h1>
-	<p>Weekly Updates</p>
-	<br>
-
-	<table style="margin: auto; width:80%;">	
+<!-- Blog -->
+<div style="margin: 150px 20px;">
+	<table style="margin-left: 100px; width:80%">
 		<tr>
-				<div class="blog">
-					<hr>
-					<td>
-						<img src="img/blog1.jpg" width="200px" height="150px;" style="padding: 20px" >
-					</td>
-					
-					<td>
-						<h3>UNCATEGORIZED</h3>
-						<h1 style="text-align: left;">Incredible Tailing Redfish Action!</h1>
-						<p style="text-align: left;">Incredible Tailing Redfish Action! Winter
-							is that magical time of the year when Redfish
-							really turn on and start offering pure sight
-							casting opportunities. For the past 3 to …</p>
-						<br>
-					</td>
-				</div>
-		</tr>
-		
-		<tr>
-			<div class="blog">
-				<td colspan="2">
-					<hr>
-				</td>
-			</div>
+			<td><h3>Kevin Moore</h3></td>
+
+			<td class="td2"><p>Hey Tom - 
+			<br><br>
+			Thanks again for a very enjoyable morning on the water-great break for me from the Disney/Universal madness. I felt like I was fishing with a very knowledgeable buddy instead of a hired guide. It was great how you knew there was a big fish in the area before we even saw it. That's what time on the water gets you
+			<br><br>
+			Again - great job Tom - hope we can hook up again. 
+			<br><br>
+			Kevin Moore - December 2005</td>
 		</tr>
 
 		<tr>
-			<div class="blog">
-				<td>
-					<img src="img/blog2.jpg" width="200px" height="150px" style="padding: 20px">
-				</td>
+			<td><h3>Dr. Doug Childs</h3></td>
 
-				<td>
-					<h3>UNCATEGORIZED</h3>
-					<h1 style="text-align: left;">Huge Mosquito Lagoon Red Fish</h1>
-					<p style="text-align: left;"> Huge Mosquito Lagoon Red Fish
-						are here in Florida once again and that means it’s
-						time for the fall Mullet run. The Mullet run triggers
-						a feeding frenzy for big …</p>
-					<br>
-				</td>
-				
-			</div>
+			<td class="td2"><p>Tom,
+			<br><br>
+			Thanks again for a great fishing trip a few weeks back. Here are some of the photos of my first redfish. It was great going out with a guide 
+			<br><br>
+			who makes you feel like you are just going fishing with friends. My wife and I really enjoyed it. We'll see you again soon.
+			<br><br>
+			Thanks--Dr. Doug and Andrea Childs -2006</p></td>
 		</tr>
 
 		<tr>
-			<div class="blog">
-				<td colspan="2">
-					<hr>
-				</td>
-			</div>
+			<td><h3>Rusty Nickels</h3></td>
+
+			<td class="td2"><p>Hey Tom 
+			<br><br>
+			This is Rusty
+			<br><br>
+			I would like to again thank you for the trip and hopefully I’ll be able to come down there and do it again some time soon.
+			<br><br>
+			See Ya, Rusty Nickels </td>
 		</tr>
 
 		<tr>
-			<div class="blog">
-				<td>
-					<img src="img/blog3.jpg" width="200px" height="150px;" style="padding: 20px" >
-				</td>
+			<td><h3>James Leger</h3></td>
 
-				<td>
-					<h3>UNCATEGORIZED</h3>
-					<h1 style="text-align: left;">Orlando Fishing Trip</h1>
-					<p style="text-align: left;">Orlando fishing trips and
-						guided fishing tours near orlando have been on a
-						rise over the past few years. Vacationing families
-						from around the globe have discovered phenomenal fishing just …</p>
-					<br>
-				</td>
-			</div>
+			<td class="td2"><p>Capt. Tom 
+			<br><br>
+			James Here
+			<br><br>
+			Thanks for putting me on the Snook today it was great. Let me know when the bites on again so I can book another trip out with you. Can’t wait to hook up on a big Redfish with my step son Clint.
+			<br><br>
+			James Leger  -  September 2009</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Mike Beauregard</h3></td>
+
+			<td class="td2"><p>Captain Tom,
+			<br><br>
+			It’s Mike from the Ring-power Corp.
+			<br><br>	
+			The tournament you put on for us went on with out a hitch. My boss Pat and I had an awesome day catching those big Reds and he is now hooked. He asked for your info and is looking to book another trip with his son next month so expect a call from him soon. 
+			<br><br>
+			Thanks again, Mike..... August 2007</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>David Trujilio</h3></td>
+
+			<td class="td2"><p>Hey Tom,
+				<br><br>
+			Thanks for getting us on the Redfish on a windy & rainy day, you still found them for us even though the odds were stacked against us.
+			<br><br>
+			THANK YOU 
+			<br><br>
+			David Trujillo
+			<br><br>
+			Orlando FL.</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Vinny</h3></td>
+
+			<td class="td2"><p>Tom-
+			<br><br>	
+			Thanks for for the great day on the water!!
+			<br><br>
+			My son and I had an awesome time and will definitely hook up with you again on our next trip to Florida  
+			<br>
+			THANKS, VINNY ---- April 2010</p></td>
+		</tr>
+		<tr>
+			<td><h3>Scott Hasson</h3></td>
 			
+			<td class="td2"><p>Thank You Tom!!!
+			<br><br>
+			That was the best day of fly fishing for reds I have ever had. I was happy with the first big red on fly but then we topped it with an even bigger redfish. You showed great patience until we found the right fly and it was truly the fishing trip of a life time! I do not expect to top that fishing trip but I look forward to trying next year in 2011.
+			<br><br>
+			Thanks Again, Scott Hasson</p></td>
 		</tr>
 
 		<tr>
-			<div class="blog">
-				<td colspan="2">
-					<hr>
-				</td>
-			</div>
-		</tr>
-	</table>
+			<td><h3>Minda Stevens</h3></td>
 
-	<center><button class="moreReports"><a class="reports" href="/fishingreports/index.html">MORE REPORTS</a></button></center>
+			<td class="td2"><p>Dear Capt. Tom
+			<br><br>
+			We had a marvelous time on our trip with you on 10-10-10.It was a great adventure.Your company was great and expertise was the mark of a true sportsman.Kevin and I had a wonderful time, because it was my first fishing experience, thanks for making it a great one! We will definitely see you again.Best regards, Minda Stevens</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Dan</h3></td>
+
+			<td class="td2"><p>Capt. Tom
+			<br><br>
+			Thanks again for creating a memorable day for me and my son, Danny. You are a great Captain and I felt like we made a friend in the flats of life.We will be spreading the word to our family and friends about using this adventure for a gift. It sure beats the crowds.
+			<br><br>
+			Dan the man with the plan. 
+			<br><br>
+			October 2010</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Craig Rosgen</h3></td>
+
+			<td class="td2"><p>Hey Tom,
+			<br><br>
+			Thanks for the great day out on the water, I can't remember the last time I had such a great time. The fishing was great and my dad and I had a blast, we're already talking about when we want to come down next. Here our some of the pictures that we took of the fish. Thanks again, and we hope to see you soon!
+			<br><br>
+			Craig Rosgen
+			<br><br>
+			December 2010</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Glenn Richard</h3></td>
+
+			<td class="td2"><p>Thanks for today... we had a lot of fun. Take care I'll send you some pic's of Glenn's fish.
+			<br><br>
+			December 31st 2010</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Andy Klien</h3></td>
+
+			<td class="td2"><p>Hi Tom, just a quick note before flying home to thank you for two great trips out after the redfish, even if the weather was a bit chilly! Thanks for your company and taking me to your office (the best in the world) I will definitely call you as soon as I return to Florida.
+			<br><br>
+			Kindest regards, Andy 1-7-2011</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Paul & Kelly</h3></td>
+
+			<td class="td2"><p>Thanks again for the great fishing experience.  Even with less than ideal weather/water conditions, you still got us onto big fish.
+			<br><br>
+			To see the large schools of Black Drum on the flats is a memory that will last a lifetime.  Seeing the dolphins, manatee and variety of bird species while fishing was a huge bonus.  Fishing with you was like fishing with a great buddy.  You will definitely see us again for another fishing adventure. - Paul & Kelly - Barrie, Ontario,
+			<br><br>
+			January 28th 2011  </p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Pastor David</h3></td>
+
+			<td class="td2"><p>Tom,
+			<br><br>
+			Thanks for a great day.
+			<br><br>
+			Our church is River Oaks Presbyterian Church
+			<br><br>
+			385 Washington Ave.
+			<br><br>
+			Lake Mary, Fl 32746
+			<br><br>
+			Hope to see you soon.
+			<br><br>
+			Pastor David</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Steve Cannons</h3></td>
+
+			<td class="td2"><p>Tom, Here is the picture of the Black Drum.
+			<br><br>
+			Jordan and I had a great time on the charter.
+			<br><br>
+			Thanks,
+			<br><br>
+			Steve Cannons
+			<br><br>
+			March 2011</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Frank</h3></td>
+
+			<td class="td2"><p>Hi Tom, 
+			<br><br>
+			just wanted to thank you for a nice day on the water on our trip. Cameron and i really enjoyed ourselves fishing with you we hope to get back down sometime soon and do it again. 
+			<br><br>
+			Please e-mail me the picture of Cameron with the trout i would really appreciate that.
+			<br><br>
+			Thanks again Frank</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Cary and Gavin</h3></td>
+
+			<td class="td2"><p>Tom
+			<br><br>
+			Thanks for everything!
+			<br><br>
+			Gavin had the time of his life. 
+			<br><br>
+			I was so grateful to you that the trip was all about him. We will definitely be back !
+			<br><br>
+			Cary and Gavin
+			<br><br>
+			April 12th 2011</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Jason James</h3></td>
+
+			<td class="td2"><p>Hi Tom,
+			<br><br>
+			I just wanted to thank you for the fishing charter that you gave my father and I this previous week. It was an experience that we both will never forget. You took the time to teach us and made our trip extremely enjoyable. I was really excited that you took the extra effort to help us locate the fish and put us on them. We had a blast and will use your services over and over again when we visit our Florida office. Thanks again for the great experience and the chance to have you as a friend! I would recommend you to any person seeking charting services. June-2011</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Thelbert and Montana</h3></td>
+
+			<td class="td2"><p>Hi Capt Tom
+			<br><br>
+			I just wanted to tell you Montana and I really enjoyed our selfs today thank you very much and you'll be hearing from us again. 
+			<br><br>
+			Thanks 
+			<br><br>
+			Thelbert and Montana - January 6th 2012</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Brian</h3></td>
+
+			<td class="td2"><p>Hey Tom-
+			<br><br>
+			Thanks again for the fishing trip 2/11/13. I must admit, I was skeptical at first, but you proved me 100% wrong. Me and the kids had a fantastic time, beyond our expectations.  Some of our friends didn’t even believe the photos of our catch were real.  I had to show them the video to prove it! Also, if you create a mailing list, please add me on.
+			<br><br>
+			Regards, Brian</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Dan Wright</h3></td>
+
+			<td class="td2"><p>Hey Tom-
+			<br><br>
+			Hey Tom, Corrine and I had a great time and we will be back very soon to fill up our cooler.  It was very nice to meet and talk with you, thanks again.</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>Kevin Donahue</h3></td>
+
+			<td class="td2"><p>Dear Cap'n Carver,
+			<br><br>
+			Way back in October of 2010 you treated my new bride, Minda, and I to a awesome day of fishing. Our  catch was  a Redfish each  you helped introduce her to fishing in a very exciting and humane manner. I know you've had many guests since our trip but perhaps the attached pics will jog your memory. We'd like to come back and try again, this time adding a friend. As was the case with Minda this will be an introductory flats fishing trip for him. He is a good guy and will be a pleasure to take on board.At this point I'm hoping to get an idea of how the action might be in mid-January. Our friend is fairly flexible as to date and, like us, he is located here in FL.  I'm also curious how long your $119.00 per person special runs. It is a great deal and I'd like to take advantage of it. Given that it has a limited life I assume I could book a trip for three now and then set the actual date sometime in the future. Kevin Donahue</p></td>
+		</tr>
+
+		<tr>
+			<td><h3>James Allen</h3></td>
+
+			<td class="td2"><p>Tom 
+				<br><br>
+				Just wanted to let you know a lot of your customer's stop by the store after a day on the water with you. I've never heard so many people enjoy guide fishing like they do with you. They say it's like fishing with an old friend. We here Murrays bait and tackle look forward to helping you in any way to make your customer satisfied. Now stop reading this email and go fishing. March 2013</p></td>
+		</tr>
+
+	</table>
 </div>
 
 <!-- Contact Form -->
-<div>
+<div style="padding-top: 50px; width:100%;  background-color: #f7faff;">
+	<h4 style="text-align: center;">I'D LOVE TO HEAR FROM YOU</h4>
+	<h1 style="letter-spacing: 3px">CONTACT ME ANY TIME</h1>
+	<br>
+	<h4 style="text-align: center;">Lets Go Fishing!</h4>
+	<br><br><br>
+	
+
+	<center><table>
+		<tr>
+			<td>
+				<form action="mail.php" method="post">
+					<label for="name">NAME</label>
+					<input id="name" type="text" required name="name">
+
+					<label for="email">YOUR EMAIL</label>
+					<input id="email" type="text" required name="email">
+
+					<label for="phone">YOUR PHONE</label>
+					<input id="phone" type="text" required name="phone">
+
+					<label for="subject">SUBJECT</label>
+					<input id="subject" type="text" required name="subject">
+			
+					<br>
+					<label for="message">YOUR MESSAGE</label>
+					<textarea id="message" name="message" cols="25" rows="5"></textarea>
+					<br>
+					<input type="submit" name="submit" value="Submit">
+					<br><br><br>
+				</form>
+			</td>
+
+			<td id="contact_pc">
+				<div>
+					<h1 style="text-align: unset">Hours of Operation:</h1>
+					<h4>Monday through Sunday open 6am to 10pm</h4>
+					<br><br><br><br>
+					<h1 style="text-align: unset">Business Information:</h1>
+					<h4><img id="icon" src="../img/location.png">1103 Garden ST. Titusville FL, 32796</h4>
+					<h4><img id="icon" src="../img/phone.png">1-407-432-5138</h4>
+					<h4><img id="icon" src="../img/mail.png"><a style="text-decoration: underline; color:dodgerblue" href="mailto:flataddicted@gmail.com">flataddicted@gmail.com</a></h4>
+				</div>
+			</td>
+		</tr>
+
+	</table></center>
 </div>
 
 <!-- Footer -->
 <footer>
-	<p class="footer">THE SOCIAL THING</p>
-	<ul class="footer">
-		<li><a style="text-decoration: none;" href="https://www.facebook.com/Flataddicted"> <img src="img/facebook.svg" alt="" width="50px" height="50px"></li>
-		<li><a style="text-decoration: none;" href="https://twitter.com/flataddicted"> <img src="img/twitter.svg" alt="" width="50px" height="50px"></li>
-		<li><a style="text-decoration: none;" href="https://plus.google.com/+TomCarver"> <img src="img/googleplus.svg" alt="" width="50px" height="50px"></li>
-		<li><a style="text-decoration: none;" href="https://www.instagram.com/flataddicted/"> <img src="img/instagram.svg" alt="" width="50px" height="50px"></li>
-		<li><a style="text-decoration: none;" href="https://www.youtube.com/channel/UCXz5g_fsJJOgfADpsXqn34Q"> <img src="img/youtube.svg" alt="" width="50px" height="50px"></li>
+
+	<table style="width: 100%; table-layout: fixed" cellspacing="0" cellpadding="0">
+
+		<tr>
+			<td>
+				<p class="footer">THE SOCIAL THING</p>
+				<ul class="footer">
+					<li><a href="https://www.facebook.com/Flataddicted"> <img src="../img/facebook.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://twitter.com/flataddicted"> <img src="../img/twitter.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://plus.google.com/+TomCarver"> <img src="../img/googleplus.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://www.instagram.com/flataddicted/"> <img src="../img/instagram.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://www.youtube.com/channel/UCXz5g_fsJJOgfADpsXqn34Q"> <img src="../img/youtube.svg" alt="" width="50px" height="50px"></li>
+				</ul>
+			</td>
+
+				
+			<td id="normalblog"style="padding-right: 100px; padding-top:50px; float: right;">
+					<h4>Monday through Sunday open 6am to 10pm</h4>
+					<h4><img id="icon" src="../img/location2.png">1103 Garden ST. Titusville FL, 32796</h4>
+					<h4><img id="icon" src="../img/phone2.png">1-407-432-5138</h4>
+					<h4><img id="icon" src="../img/mail2.png"><a style="text-decoration: underline; color:dodgerblue" href="mailto:flataddicted@gmail.com">flataddicted@gmail.com</a></h4>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="mobileblog">
+				<ul style="margin: 0 auto; width: 400px; padding: 20px;">
+					<li class="footer"><h4>Monday through Sunday open 6am to 10pm</h4></li>
+					<li class="footer"><h4><img id="icon" src="../img/location2.png">1103 Garden ST. Titusville FL, 32796</h4></li>
+					<li class="footer"><h4><img id="icon" src="../img/phone2.png">1-407-432-5138</h4></li>
+					<li class="footer"><h4><img id="icon" src="../img/mail2.png">
+						<a style="text-decoration: underline;
+					 	color:dodgerblue" href="mailto:flataddicted@gmail.com">
+						 flataddicted@gmail.com</a></h4></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+
 </footer>
 
 </body>
