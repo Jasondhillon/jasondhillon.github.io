@@ -91,6 +91,7 @@ body{
 	}
 
 /* Contact Form */
+
     label{
         font-family: 'Ubuntu', sans-serif;
         font-size: 20px;
@@ -120,6 +121,13 @@ body{
     #mobileblog{
         display: none;
     }
+table.testamonials{
+    margin-left: 100px;
+    width:80%
+}
+td{
+    padding-right: 50px;
+}
 
 @media screen and (max-width:1604px){
 }
@@ -161,6 +169,13 @@ body{
 @media screen and (max-width:875px){
     #contact_pc{
         padding-left: 50px;
+    }
+    table.testamonials{
+        margin-left: 0px;
+        width: 100%;
+    }
+    td{
+    padding-right: 0px;
     }
 }
 @media screen and (max-width:770px){
@@ -222,9 +237,6 @@ li.footer{
     display: block;
 }
 
-td{
-    padding-right: 50px;
-}
 
 table{
     border-spacing: 20px;
@@ -236,3 +248,4 @@ td.td2{
     margin-bottom: 100px;
 
 }
+
