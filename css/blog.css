@@ -91,6 +91,9 @@ body{
 	}
 
 /* Contact Form */
+    table{
+     margin: 0 auto;
+    }
 
     label{
         font-family: 'Ubuntu', sans-serif;

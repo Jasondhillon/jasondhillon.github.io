@@ -79,18 +79,20 @@
 </div>
 
 <!-- Contact Form -->
-<div style="padding-top: 50px; width:100%;  background-color: #f7faff;">
+<div style="padding-top: 50px; background-color: #f7faff;">
 	<h4 style="text-align: center;">I'D LOVE TO HEAR FROM YOU</h4>
 	<h1 style="letter-spacing: 3px">CONTACT ME ANY TIME</h1>
 	<br>
 	<h4 style="text-align: center;">Lets Go Fishing!</h4>
 	<br><br><br>
-	
 
-	<center><table>
+	<table>
 		<tr>
 			<td>
-				<form action="mail.php" method="post">
+				<form id="contactme" action="../mail.php" method="post" target="sent">
+					
+					<input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?>" />
+
 					<label for="name">NAME</label>
 					<input id="name" type="text" required name="name">
 
@@ -108,11 +110,24 @@
 			
 					<br>
 					<label for="message">YOUR MESSAGE</label>
-					<textarea id="message" name="message" cols="25" rows="5"></textarea>
+					<textarea id="message" name="message" cols="25" rows="5" required></textarea>
 					<br>
-					<input type="submit" name="submit" value="Submit">
+					<input type="button" id="btnsubmit" value="Submit" onclick="submitForm()">
 					<br><br><br>
 				</form>
+
+				<script>
+					function submitForm() {
+						var frm = document.getElementById('contactme');
+						frm.submit(); // Submit
+						frm.reset();  // Reset
+						return true;
+					}
+				</script>
+
+				<iframe class="sent" name="sent" frameborder="0" border="0" cellspacing="0" style="border-style: none; width:100%; height:50px;"></iframe>
+
+				
 			</td>
 
 			<td id="contact_pc">
@@ -128,8 +143,10 @@
 			</td>
 		</tr>
 
-	</table></center>
+	</table>
 </div>
+
+
 
 <!-- Footer -->
 <footer>

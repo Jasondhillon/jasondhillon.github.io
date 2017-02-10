@@ -7,12 +7,10 @@
 		$people = $_POST['people'];
 		$message = $_POST['message'];
 
-		$body = "Hi my name is " . $name .  "\n" . "We have " . $people . "coming with us.\n\n" . $message . "\n" . "My email is " . $email . "\n" . $phone;
-		$header = "From: $email";
+		$body = "Hi, my name is " . $name .  ",\n" . "We have " . $people . " people coming with us.\n\n" . $message . "\n\n" . "My email is " . $email . "\n" . $phone;
 
-		if($_POST['submit']){
-			mail($to, $subject, $body, $header);
-            header('Location: index.html');
-		}
+			mail($to, $subject, $body);
+			echo "Thank you! I'll contact you shortly!";
+
 
 ?>
