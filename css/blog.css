@@ -137,6 +137,9 @@ td{
 @media screen and (max-width:1520px){
 }
 @media screen and (max-width:1420px){
+        input.nav_button{
+        margin-right:5px;
+    }
 }
 @media screen and (max-width:1220px){
 }
@@ -240,7 +243,11 @@ li.footer{
     display: block;
 }
 
-
+ul.contact{
+    margin: 0 auto;
+     width: 400px;
+     -webkit-padding-start: 20px;
+}
 table{
     border-spacing: 20px;
 }
