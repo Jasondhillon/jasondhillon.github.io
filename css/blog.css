@@ -245,8 +245,9 @@ li.footer{
 
 ul.contact{
     margin: 0 auto;
-     width: 400px;
-     -webkit-padding-start: 20px;
+    width: 400px;
+    -webkit-padding-start: 0px;
+    padding-left: -20px;
 }
 table{
     border-spacing: 20px;
