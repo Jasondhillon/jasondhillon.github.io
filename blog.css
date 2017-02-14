@@ -1,0 +1,257 @@
+
+body{
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+	html{
+			overflow-x: hidden;
+		}
+	a{
+			text-decoration: none;
+			color: #333;
+		}
+	p{
+	    	font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			text-align: left;
+            padding-left: 60px;
+            width:90%;
+	}
+
+	h1{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: center;
+			color: #333;
+	}
+
+	h3, h4{
+			font-family: 'Ubuntu', sans-serif;
+			text-align: left;
+			color: dodgerblue;
+            
+	}
+
+	h4{
+			color: gray;
+	}
+
+    img.photo{
+        padding:20px;
+        width: 80%;
+        max-height: 800px;
+    }
+
+	li{
+			display: inline-block;
+	}
+
+    hr{
+        width: 90%;
+    }
+
+/* Navbar */
+	li.logo{
+			float:left;
+			vertical-align: middle; 
+			padding-left:75px; 
+			padding-top:5px;
+	}
+    ul.header{
+		text-align: right;
+		height: 75px;
+		line-height: 75px;
+		margin: 0px;
+	}
+
+	a.header{
+			font-family: 'Ubuntu', sans-serif;
+			color: #333;
+			margin: 30px 40px 20px 0px;
+	}
+
+	div.header{
+			position: fixed;
+			width: 100%;
+			z-index: 2;
+			background-color: white;
+	}
+
+	li:active a{
+			color: dodgerblue; 
+	}
+
+	input.nav_button{
+			display: none;
+			color: #333;
+			float:right;
+			margin-top: 20px;
+			margin-right:100px;
+			background-color: white;
+	}
+
+/* Contact Form */
+    table{
+     margin: 0 auto;
+    }
+
+    label{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 20px;
+        color: #333;
+    }
+
+    input, textarea{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 20px;
+        color: #333;
+        padding: 10px;
+        display: block;
+        border: none;
+        background-color: #eaf2ff
+    }
+    #icon{
+        padding-right: 20px;
+    }
+
+    #contact_mobile{
+        display: none;
+    }
+    #contact_pc{
+        padding-left: 200px;
+    }
+
+    #mobileblog{
+        display: none;
+    }
+table.testamonials{
+    margin-left: 100px;
+    width:80%
+}
+td{
+    padding-right: 50px;
+}
+
+@media screen and (max-width:1604px){
+}
+@media screen and (max-width:1520px){
+}
+@media screen and (max-width:1420px){
+        input.nav_button{
+        margin-right:5px;
+    }
+}
+@media screen and (max-width:1220px){
+}
+@media screen and (max-width:1080px){
+    input.nav_button{
+        display:block;
+    }
+    li.header{
+        display: none;
+    }
+    div.header:hover li.header{
+        display: block;
+        position: relative;
+        float:left;
+        text-align: left;
+        top:40px;
+        padding: 10px 0px 10px 20px;
+        outline: 2px #333 solid;
+        border-collapse: collapse;
+        background-color: white;
+        width: 100%;
+    }
+    ul.header{
+        padding-left:0px;
+        line-height: unset;
+    }
+    li.logo{
+        padding-top:15px;
+    }
+}
+@media screen and (max-width:973px){
+}
+@media screen and (max-width:875px){
+    #contact_pc{
+        padding-left: 50px;
+    }
+    table.testamonials{
+        margin-left: 0px;
+        width: 100%;
+    }
+    td{
+    padding-right: 0px;
+    }
+}
+@media screen and (max-width:770px){
+    #normalblog{
+        display:none;
+    }
+    #mobileblog{
+        display:block;
+    }
+    #contact_pc{
+        display: none;
+    }
+
+    #contact_mobile{
+        display: block;
+
+    }
+    ul.footer{
+        padding-right:0px;
+    }
+
+    p{
+        padding-left: 5px;
+    }
+
+}
+@media screen and (max-width:720px){
+}
+@media screen and (max-width:610px){
+}
+@media screen and (max-width:610px){
+    li.logo{
+        padding-left: 20px;
+    }
+}
+/* Footer */
+footer{
+    width:100%;
+    background-color: #111;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+p.footer{
+    padding: 50px 0 20px 0;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+}
+
+ul.footer{
+    display: inline;
+    list-style: none;
+    padding-right: 50px;
+}
+li.footer{
+    display: block;
+}
+
+
+table{
+    border-spacing: 20px;
+}
+td.td2{
+    background-color: #f0f0f0;
+    max-width: 800px;
+    padding-right: 0;
+    margin-bottom: 100px;
+
+}
+
