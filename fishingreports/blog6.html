@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Jason Dhillon
+		 1/23/17
+		 Test site for learning -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../css/blog.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div>
+	<noscript id="deferred-styles">
+      	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    </noscript>
+
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+</div>
+
+<!-- NavBar -->
+<div class="header">
+		<nav>
+			<input class="nav_button" type="image" src="../img/menu.png" width="25px" height="20px"/>
+			<ul class="header">
+				<li class="logo">
+					<img src="../img/logo.png"/></li>
+				<li class="header"><a class="header" href="../index.html">Home Page</a></li> 
+				<li class="header"><a class="header" href="index.html">Fishing Reports</a></li>
+				<li class="header"><a class="header" href="../rates/index.html">Rates/Location</a></li>
+				<li class="header"><a class="header" href="../photogallery/index.html">Photo Gallery</a></li>
+				<li class="header"><a class="header" href="../testamonials/index.html">Testamonials</a></li>
+			</ul>
+		</nav>
+</div>
+
+<!-- Blog -->
+<div style="margin: 150px 20px;">
+	<h1 style="text-align: left">Mosquito Lagoon</h1>
+	<h3 style="text-align: left">POSTED ON FEBURARY 12, 2017 BY FLATADDICTED</h3>
+	<hr><br>
+
+	
+	<p>Mosquito Lagoon February 12th – 2017 Report:</p>
+	<p>The word for this past week will be wow. That simple little word is exactly what sums up the fishing report for the last 10 to 12 days. One week ago we started out with one of the strongest cold front of the year. That cold front brought high winds from the Northeast that eventually pushed a good portion of our remaining water depth out of the Mosquito Lagoon. When the water dropped the fish that inhabited the shallower areas were forced to move out to deeper locations. When that happen it created several areas that were very productive for redfish and sea trout. The fish stayed there because of the abundance of food so they had no reason to search for other areas. In short that means we were able to go and target these areas of huge redfish schools and have extremely successful days. Some would say that this is the Mosquito Lagoon in its old hay days. I can’t disagree with that statement because it does feel like the same crazy good fishing from 10 years ago or more.</p>
+	<p>The thing that has truly impressed me over the last two weeks has been the black drum fishing. The black drum have just been on fire, especially early morning to midday. Most schools that we’ve been finding have been holding 10 – 15 pound fish. The average school size is somewhere between fifty and a hundred fish. Not only have there been great numbers of them out on the flats but they’ve been eating really good and the bite has been super aggressive.</p>
+	<p>For me I have found the sea trout bite to be pretty good not exactly the best but pretty good. The fish are averaging between 14 and 18 inches sitting on the outside of sand bars and deeper Flats. Some spots are holding huge schools and the bite is fast and consistent. Other areas seem to have smaller schools or maybe even smaller groups and the bite is coming a little slower.</p>
+	<p>For the rest of the month of February the Outlook looks really good. You can expect days of 4 – 8 pound red fish, 8 – 15 pound black drum and sea trout ranging from 1 – 3 pounds.</p>
+	<p>The Mosquito Lagoon is the fishing destination of choice right now. That’s where the best bite has been lately and I expect to continue fishing it for the next several months. The Lagoon is about 50 to 55 minutes from Disney on the east side of Orlando. The town where it is located is called Titusville if you’re looking on Google Maps. Call me anytime, I’d be more than happy to help locate the perfect date for. I look forward to fishing with you soon.</p>
+	<p>Pictures from Last Weeks Trips:</p>
+	<center><img class="photo" src="../img/blog6_1.jpg">
+		<img class="photo" src="../img/blog6_2.jpg">
+		<img class="photo" src="../img/blog6_3.jpg">
+		<img class="photo" src="../img/blog6_4.jpg">
+		<img class="photo" src="../img/blog6_5.jpg"></center>
+</div>
+
+<!-- Contact Form -->
+<div style="padding-top: 50px; background-color: #f7faff;">
+	<h4 style="text-align: center;">I'D LOVE TO HEAR FROM YOU</h4>
+	<h1 style="letter-spacing: 3px">CONTACT ME ANY TIME</h1>
+	<br>
+	<h4 style="text-align: center;">Lets Go Fishing!</h4>
+	<br><br><br>
+
+	<table>
+		<tr>
+			<td>
+				<form id="contactme" action="../mail.php" method="post" target="sent">
+					
+					<input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?>" />
+
+					<label for="name">NAME</label>
+					<input id="name" type="text" required name="name">
+
+					<label for="people">NUMBER OF PEOPLE</label>
+					<input id="people" type="text" required name="people">
+
+					<label for="email">YOUR EMAIL</label>
+					<input id="email" type="text" required name="email">
+
+					<label for="phone">YOUR PHONE</label>
+					<input id="phone" type="text" required name="phone">
+
+					<label for="subject">SUBJECT</label>
+					<input id="subject" type="text" required name="subject">
+			
+					<br>
+					<label for="message">YOUR MESSAGE</label>
+					<textarea id="message" name="message" cols="25" rows="5" required></textarea>
+					<br>
+					<input type="button" id="btnsubmit" value="Submit" onclick="submitForm()">
+					<br><br><br>
+				</form>
+
+				<script>
+					function submitForm() {
+						var frm = document.getElementById('contactme');
+						frm.submit(); // Submit
+						frm.reset();  // Reset
+						return true;
+					}
+				</script>
+
+				<iframe class="sent" name="sent" frameborder="0" border="0" cellspacing="0" style="border-style: none; width:100%; height:50px;"></iframe>
+
+				
+			</td>
+
+			<td id="contact_pc">
+				<div>
+					<h1 style="text-align: unset">Hours of Operation:</h1>
+					<h4>Monday through Sunday open 6am to 10pm</h4>
+					<br><br><br><br>
+					<h1 style="text-align: unset">Business Information:</h1>
+					<h4><img id="icon" src="../img/location.png">1103 Garden ST. Titusville FL, 32796</h4>
+					<h4><img id="icon" src="../img/phone.png">1-407-432-5138</h4>
+					<h4><img id="icon" src="../img/mail.png"><a style="text-decoration: underline; color:dodgerblue" href="mailto:flataddicted@gmail.com">flataddicted@gmail.com</a></h4>
+				</div>
+			</td>
+		</tr>
+
+	</table>
+</div>
+
+
+
+<!-- Footer -->
+<footer>
+
+	<table style="width: 100%; table-layout: fixed" cellspacing="0" cellpadding="0">
+
+		<tr>
+			<td>
+				<p class="footer">THE SOCIAL THING</p>
+				<ul class="footer">
+					<li><a href="https://www.facebook.com/Flataddicted"> <img src="../img/facebook.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://twitter.com/flataddicted"> <img src="../img/twitter.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://plus.google.com/+TomCarver"> <img src="../img/googleplus.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://www.instagram.com/flataddicted/"> <img src="../img/instagram.svg" alt="" width="50px" height="50px"></li>
+					<li><a href="https://www.youtube.com/channel/UCXz5g_fsJJOgfADpsXqn34Q"> <img src="../img/youtube.svg" alt="" width="50px" height="50px"></li>
+				</ul>
+			</td>
+
+				
+			<td id="normalblog"style="padding-right: 100px; padding-top:50px; float: right;">
+					<h4>Monday through Sunday open 6am to 10pm</h4>
+					<h4><img id="icon" src="../img/location2.png">1103 Garden ST. Titusville FL, 32796</h4>
+					<h4><img id="icon" src="../img/phone2.png">1-407-432-5138</h4>
+					<h4><img id="icon" src="../img/mail2.png"><a style="text-decoration: underline; color:dodgerblue" href="mailto:flataddicted@gmail.com">flataddicted@gmail.com</a></h4>
+			</td>
+		</tr>
+
+		<tr>
+			<td id="mobileblog">
+				<ul style="margin: 0 auto; width: 400px; padding: 20px;">
+					<li class="footer"><h4>Monday through Sunday open 6am to 10pm</h4></li>
+					<li class="footer"><h4><img id="icon" src="../img/location2.png">1103 Garden ST. Titusville FL, 32796</h4></li>
+					<li class="footer"><h4><img id="icon" src="../img/phone2.png">1-407-432-5138</h4></li>
+					<li class="footer"><h4><img id="icon" src="../img/mail2.png">
+						<a style="text-decoration: underline;
+					 	color:dodgerblue" href="mailto:flataddicted@gmail.com">
+						 flataddicted@gmail.com</a></h4></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+
+</footer>
+
+</body>
+</html>
