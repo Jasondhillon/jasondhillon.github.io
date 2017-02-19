@@ -6,6 +6,7 @@
 		 Test site for learning -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>FlatAddicted</title>
+	<met name="description" content="Orlando's #1 Fishing Charter with award winning, Captain Tom Carver!'">
 </head>
 
 <body>
@@ -92,69 +93,287 @@
 		}
 
 		/*Splash Screen*/
+		
 		div.splash{
-			margin-top: 80px;
-			position: relative;
-			display: inline-block;
-			width: 100%;
-			height: auto;
-			overflow: hidden;
-			background-color: black;
-			
+				margin-top: 80px;
+				position: relative;
+				width: 100%;
+				overflow: hidden;
+				background-color: black;
+				
 		}
 		div.text-box{
-			position: absolute;   
-			height: 100%;
-			text-align: center;    
-			width: 100%;
-			z-index: 1;
-
+				position: absolute;   
+				height: 100%;
+				text-align: center;    
+				width: 100%;
+				z-index: 1;
 		}
 		img.main{
-			display:block;
-			overflow: hidden;
-			min-height: 600px;
-			min-width: 100%;
-			opacity: .85;
-			z-index: 0;
+				overflow: hidden;
+				min-height: 600px;
+				width:100%;
+				min-width: 100%;
+				opacity: .85;
+				z-index: 0;
 		}
-
 		p.splashtext{
-			color:white;
-			font-weight: bold;
-			text-transform: uppercase;
-			text-align: left;
-			text-shadow: 1px 1px #111;
-			margin: 0px 0px 0px 150px;
-			padding: 0px;
-			font-size: 48px;
+				color:white;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-align: left;
+				text-shadow: 1px 1px #111;
+				margin: 0px 0px 0px 150px;
+				padding: 0px;
+				font-size: 48px;
 
 		}
 		p.splashsubtext{
-			color:white;
-			text-shadow: 2px 1px #111;
-			text-align: left;
-			font-size: 24px;
-			margin-left: 150px;
+				color:white;
+				text-shadow: 2px 1px #111;
+				text-align: left;
+				font-size: 24px;
+				margin-left: 150px;
 		}
 		button.call{
-			border-color: white;
-			float: left;
-			font-family: 'Ubuntu', sans-serif;
-			text-transform: uppercase;
-			padding: 10px;
-			margin-left: 150px;
-			border-radius: 3px;
-			background-color: transparent;
+				border-color: white;
+				float: left;
+				font-family: 'Ubuntu', sans-serif;
+				text-transform: uppercase;
+				padding: 10px;
+				margin-left: 150px;
+				border-radius: 3px;
+				background-color: transparent;
 		}
 		a.call{
-			color: white;
-			font-size: 20px;
+				color: white;
+				font-size: 20px;
+		}
+
+		@media screen and (max-width:1080px){
+			img.main{
+				margin-left:-100px;
+			}
+			div.splash{
+				overflow: hidden;
+			}
+			div.text-box{
+				bottom: 50px;
+				left: -50px;
+				max-width: 600px;
+			}
+			input.nav_button{
+				display:block;
+			}
+			li.header{
+				display: none;
+			}
+			div.header:hover li.header{
+				display: block;
+				position: relative;
+				float:left;
+				text-align: left;
+				top:40px;
+				padding: 10px 0px 10px 20px;
+				outline: 2px #333 solid;
+				border-collapse: collapse;
+				background-color: white;
+				width: 100%;
+			}
+			ul.header{
+				padding-left:0px;
+				line-height: unset;
+			}
+			li.logo{
+				padding-top:15px;
+			}
+			img.video{
+			margin-top: -300px;
+			}
+			table.rates{
+				width: 80%;
+				float: none;
+				padding-left: 0;
+			}
+			br.rates{
+				display: block;
+			}
+
+		}
+		@media screen and (max-width:973px){
+
+			img.main{
+				margin-left:-160px;
+			} 
+			div.text-box{
+				left: -20px;
+				max-width: 400px;
+			}
+			
+			p.bio{
+				padding-left:100px;
+				padding-right: 100px;
+			}
+
+			img.video{
+				margin-top: -300px;
+			}
+			
+			figure{
+				width: 50%;
+			}
+
+		}
+		@media screen and (max-width:875px){
+			div.text-box{
+				left: -80px;
+				bottom: 60px;
+			}
+			img.main{
+				margin-left: -250px;
+			}
+			p.bio{
+				padding-left:20px;
+				padding-right: 20px;
+			}
+			img.video{
+			margin-top: -200px;
+			}
+
+			#contact_pc{
+				padding-left: 50px;
+			}
+		}
+		@media screen and (max-width:770px){
+			div.text-box{
+				left: 100px;
+				max-width: 600px;
+			}
+			img.main{
+				margin-left: -550px;
+			}
+			br.space{
+				display: block;
+			}
+			p.splashtext{
+				text-align: center;
+			}
+			p.splashsubtext{
+				text-align: center;
+			}
+			button.call{
+				margin-left: 300px;
+			}
+			img.video{
+			margin-top: -200px;
+			}
+			figure{
+				width:100%;
+			}
+
+			#normalblog{
+				display:none;
+			}
+			#mobileblog{
+				display:block;
+			}
+			#contact_pc{
+				display: none;
+			}
+
+			#contact_mobile{
+				display: block;
+
+			}
+			ul.footer{
+				padding-right:0px;
+			}
+
+		}
+		@media screen and (max-width:720px){
+			div.text-box{
+				left: 100px;
+				bottom: 110px;
+				max-width: 500px;
+			}
+			button.call{
+				margin-left: 255px;
+			}
+			table.rates{
+				margin-left:50px;
+			}
+		}
+		@media screen and (max-width:610px){
+			img.main{
+				margin-left: -550px;
+			}
+			div.text-box{
+				left: -120px;
+				bottom: 20px;
+				min-width: 450px;
+			}
+			br.space{
+				display: none;
+			}
+			button.call{
+				margin-left: 220px;
+			}
+			input.nav_button{
+				margin-right:5px;
+			}
+
+		}
+		@media screen and (max-width:610px){
+		img.bio{
+			width: 100%;
+			height: 100%;
+			}
+			li.logo{
+				padding-left: 20px;
+			}
 		}
 	</style>
 </div>
 
-<!-- Scripts -->
+<!-- JQuery -->
+<script type="text/javascript">
+	var dfLoadStatus = 0;
+	var dfLoadFiles = ["https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"];
+
+	function downloadJSAtOnload() {
+		if (!dfLoadFiles.length) return;
+
+			var element = document.createElement('script');
+			element.src = dfLoadFiles[0];
+			element.onload = element.onreadystatechange = function () {
+				if (!this.readyState || this.readyState === 'complete') {
+					if (dfLoadStatus === 0) {
+						performDeferredActions();
+					}
+				}
+			};
+			document.body.appendChild(element);
+		}
+
+	if (window.addEventListener) {
+		window.addEventListener("load", downloadJSAtOnload, false);
+	} else if (window.attachEvent) {
+		window.attachEvent("onload", downloadJSAtOnload);
+	} else {
+		window.onload = downloadJSAtOnload;
+	}
+
+	function performDeferredActions() {
+
+			(function(){
+			$("#loading").fadeOut("slow");
+			$("#main").fadeIn("slow");
+			$("#splash").css("height", "unset");
+		}());
+	}
+</script>
+
+<!-- Defer Scripts -->
 <div>
 	<script>
 		function preloadImages(array) {
@@ -216,7 +435,7 @@
 </div>
 
 <!-- Splash Screen -->
-<div class="splash">
+<div class="splash" id="splash" style="height:767px; overflow-x: hidden">
 	<div class="text-box">
 		<p class="splashtext" style="margin-top: 180px;">Orlando Fishing</p>
 		<p class="splashtext">Charters</p>
@@ -226,7 +445,8 @@
 		<p class="splashsubtext">ONLY <b>$149 per person</b> For A Limited Time</p>
 		<button class="call"><a class="call" href="tel:1-407-432-5138">CALL TODAY</a></button>
 	</div>
-	<img class="main" src="img/main.jpg" width="100%"/>
+	<img class="main" id="main" src="img/main.jpg" style="display: none"/>
+	<img id="loading" class="main" src="img/main.jpg" style="opacity: .01; position: absolute; overflow: auto"/>
 </div>
 
 <!-- Prices -->
