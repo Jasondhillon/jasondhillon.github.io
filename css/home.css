@@ -84,65 +84,6 @@ body{
 
 /*Splash Screen*/
 
-	div.splash{
-			margin-top: 80px;
-			position: relative;
-			display: inline-block;
-			width: 100%;
-			height: auto;
-			overflow: hidden;
-			background-color: black;
-			
-	}
-	div.text-box{
-			position: absolute;   
-			height: 100%;
-			text-align: center;    
-			width: 100%;
-			z-index: 1;
-
-	}
-	img.main{
-			display:block;
-			overflow: hidden;
-			min-height: 600px;
-			min-width: 100%;
-			opacity: .85;
-			z-index: 0;
-	}
-
-	p.splashtext{
-			color:white;
-			font-weight: bold;
-			text-transform: uppercase;
-			text-align: left;
-			text-shadow: 1px 1px #111;
-			margin: 0px 0px 0px 150px;
-			padding: 0px;
-			font-size: 48px;
-
-	}
-	p.splashsubtext{
-			color:white;
-			text-shadow: 2px 1px #111;
-			text-align: left;
-			font-size: 24px;
-			margin-left: 150px;
-	}
-	button.call{
-			border-color: white;
-			float: left;
-			font-family: 'Ubuntu', sans-serif;
-			text-transform: uppercase;
-			padding: 10px;
-			margin-left: 150px;
-			border-radius: 3px;
-			background-color: transparent;
-    }
-	a.call{
-			color: white;
-			font-size: 20px;
-}
 
 /* Fish/Prices */
 p.fishtype{
