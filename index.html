@@ -6,65 +6,74 @@
   
   <style>
     html, body{width:100%; height: 100%; font-family: 'Lato', sans-serif; color: #ddd;}
-    
-      /* Navbar */
-			.topnav {
-        position: absolute;
-				overflow: hidden;
-			}
-
-			.topnav a {
-				float: left;
-				display: block;
-				color: white;
-				text-align: center;
-				padding: 22px 21px;
-				text-decoration: none;
-        text-shadow: 0px 0px 10px black;
-				font-size: 20px;
-			}
-
-
-			.topnav a:hover {
-				background-color: #ddd;
-				color: black;
-        text-shadow: none;
-			}
-
-			.topnav .icon {
-				display: none;
-				color: white;
-			}
-			@media screen and (max-width:770px){
-				.topnav a:not(:last-child) {
-					display: none;
-				}
-
-        .topnav{
-          min-height:100px;
-          position: relative;
+    /* Navbar */
+        .topnav {
+          position: absolute;
+          overflow: hidden;
         }
-				.topnav a.icon {
-					position: absolute;
-          right: 0;
-					display: block;
-					
-				}
-				.topnav.responsive {
-					position: relative;
-				}
-				.topnav.responsive .icon {
-					position: absolute;
-					right: 0;
-					top: 0;
-					
-				}.topnav.responsive a {
-					float: none;
-					display: block;
-					text-align: left;
-				}
 
-			}
+        .topnav a {
+          float: left;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 22px 21px;
+          text-decoration: none;
+          text-shadow: 0px 0px 10px black;
+          font-size: 20px;
+        }
+
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+          text-shadow: none;
+        }
+
+        .topnav .icon {
+          display: none;
+          color: white;
+        }
+    @media screen and (max-width:770px){
+      html, body{overflow-x: hidden}
+
+      .topnav a:not(:last-child) {
+        display: none;
+      }
+
+      .topnav{
+        min-height:100px;
+        position: relative;
+      }
+
+      .topnav a.icon {
+        position: absolute;
+        right: 0;
+        display: block;
+      }
+
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      #moon{
+        font-size: 15px;
+        top:400px;
+      }
+
+    }
   </style>
 
   <!-- Async Script -->
@@ -122,29 +131,29 @@
 <!-- Quote  -->
   <div style="background-color: white; padding: 80px 50px; line-height: 30px;">
     <h1 style="text-align: center; color: #444; text-transform: uppercase;">The Road Not Taken</h1>
-    <pre style="text-align: center; vertical-align: middle; margin: 0 auto; font-size: 20px; color: #777" >
+    <p style="text-align: center; vertical-align: middle; margin: 0 auto; font-size: 20px; color: #777" >
 
         "I shall be telling this with a sigh
         Somewhere ages and ages hence:
         Two roads diverged in a wood, and I—
         I took the one less traveled by,
-        And that has made all the difference."</pre>
+        And that has made all the difference."</p>
   </div>
 
 <!-- Parallax -->
   <div class="parallax" style="background-image: url(images/moon4.jpg);">
     <div style="position: relative; left:50px; top:200px; width:40%;">
-    <pre style="position: absolute; text-transform:uppercase; background-color:#282E34; width:fit-content; font-size: 18px; letter-spacing: 5px; padding: 20px;">
+    <p style="position: absolute; text-transform:uppercase; background-color:#282E34; width:100%; font-size: 18px; letter-spacing: 5px; padding: 20px;">
       "I am the Alpha and the Omega,
          the First and the Last,
-           the Beginning and the End."</pre>
+           the Beginning and the End."</p>
     </div>
   </div>
   
 <!-- Slide Show -->
   <div style="background-color: #282E34; height: 100px;"></div>
   <div style="background-color: #282E34;">
-    <div class="w3-content w3-display-container" style=" height:350px;">
+    <div class="w3-content w3-display-container" style="height:350px;">
       <img class="mySlides" src="images/img_nature_wide.jpg" style="z-Index:3">
       <img class="mySlides" src="images/img_fjords_wide.jpg" style="z-Index:2">
       <img class="mySlides" src="images/img_mountains_wide.jpg" style="z-Index:1">
