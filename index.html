@@ -137,17 +137,51 @@
 
       <script>
           function myFunction() {
+            var temp;
+            var temp2;
+            clearInterval(temp);
+            clearInterval(temp2);
+
             var x = document.getElementById("myTopnav");
+            var y = document.getElementById("welcometext");
+
             if (x.className === "topnav") {
               x.className += " responsive";
+
+              y.style.opacity = 1;
+              var temp = setInterval(function(){
+                if(y.style.opacity<= 0){
+                  y.style.opacity = 0;
+                  clearInterval(temp);
+
+                }else{
+                  y.style.opacity-=.1;
+                  console.log("subtracting");
+                }
+              }, 10);
+            
+              
+
             } else {
               x.className = "topnav";
+              y.style.opacity = 0;
+                var temp2 = setInterval(function(){
+                  if(y.style.opacity>= 1){
+                    y.style.opacity = 1;
+                    clearInterval(temp2);
+
+                  }else{
+                    y.style.opacity = parseFloat(y.style.opacity) + .05;
+                    console.log("adding");
+                  }
+                }, 10);
+              
             }
           }
       </script>
 
-    <div id= "welcome" style="text-align: center; position: absolute; margin: 0 auto; display:block">
-      <p style="position: absolute; left:0; right:0; text-transform:uppercase; background-color:#282E34; width:250px; text-align: center; font-size: 30px; letter-spacing: 10px; padding: 20px; margin:0 auto">welcome</p>
+    <div id= "welcome" style="text-align: center; position: absolute; left:0; right:0; margin: 0 auto; display:block">
+      <p id="welcometext" style="opacity: 1; position: absolute; left:0; right:0; text-transform:uppercase; background-color:#282E34; width:250px; text-align: center; font-size: 30px; letter-spacing: 10px; padding: 20px; margin:0 auto">welcome</p>
     </div>
 
   </div>
@@ -311,7 +345,6 @@
       dots[next].className += " w3-white";
       x[prev].style.opacity = 1;
 
-      console.log("Previous: " + prev + "\nslideIndex: " + slideIndex)
     }
   </script>
 
