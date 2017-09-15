@@ -4,8 +4,12 @@
     .w3-badge {height:15px;width:15px;padding:0!important}
     .parallax{
     height:100%;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -5;}
+
+ @media screen and (max-width:770px){
+    .parallax{background-attachment: scroll;}
+}
