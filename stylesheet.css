@@ -10,9 +10,10 @@
     background-size: cover;
     z-index: -5;}
 
-#parallax2{height:110%}
-#parallax3{height:110%}
 
  @media screen and (max-width:770px){
     .parallax{background-attachment: scroll;}
+    #parallax2{height:120%}
+    #parallax3{height:120%}
+    
 }
