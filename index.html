@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <style>
+    /*Initial Setup of body and parallax elements*/
     html, body{width:100%; height: 100%; font-family: 'Lato', sans-serif; color: #ddd;}
     #parallax1{background-image: url(images/mosaic.jpg);}
     #parallax2{background-image: url(images/moon4.jpg); height: 110%}
     #parallax3{background-image: url(images/blur.jpg); height: 110%}
+    #relative{position: relative; left:50px; width:40%;}
     #welcome{top:50%;}
     /* Navbar */
         .topnav {
@@ -39,6 +41,17 @@
           color: white;
         }
 
+    /*Moon Picture Text*/
+    #moontext {
+      position: absolute;
+      top:200px;
+      text-transform:uppercase;
+      background-color:#282E34;
+      width:100%;
+      letter-spacing: 5px;
+      padding: 20px;
+    }
+    /*Media query for mobile devices*/
     @media screen and (max-width:770px){
 
       html{overflow-x: hidden}
@@ -91,7 +104,7 @@
 
       #moontext{
         font-size: 10px;
-        width: 45%;
+        top:100px;
      }
 
      #welcome{
@@ -124,7 +137,10 @@
 </head>
 
 <body>
-<!-- Parallax -->
+<!-- Skype Bot -->
+  <span class="skype-button bubble " data-bot-id="2c2a7e41-040a-4fcd-b10a-2480ac3c488e"></span>
+  <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+<!-- Parallax/Navbar -->
   <div class="parallax"  id="parallax1" >
 
       <nav class="topnav" id="myTopnav">
@@ -199,10 +215,10 @@
         And that has made all the difference."</p>
   </div>
 
-<!-- Parallax -->
+<!-- Parallax/Moon -->
   <div id="parallax2" class="parallax">
-    <div id="moon" style="position: relative; left:50px; width:40%;">
-      <p id="moontext" style="position: absolute; text-transform:uppercase; background-color:#282E34; width:100%; letter-spacing: 5px; padding: 20px;">
+    <div id="relative">
+      <p id="moontext">
         "I am the Alpha and the Omega,
           the First and the Last,
             the Beginning and the End."</p>
@@ -351,7 +367,7 @@
 
 <!-- Parallax -->
   <div id="parallax3" class="parallax">
-
+  </div>
 
 </body>
 </html> 
