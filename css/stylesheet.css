@@ -58,7 +58,7 @@ a{text-decoration: underline;}
 
         #welcome{
             text-align: center;
-            position: relative;
+            position: absolute;
             left:0;
             width:100%; 
             top:50%;
@@ -167,10 +167,6 @@ a{text-decoration: underline;}
         font-size: 12px;
         top:30px;
     }
-
-     #welcome{
-       top:25%;
-     }
 
      #quote{
          white-space: pre-line;
