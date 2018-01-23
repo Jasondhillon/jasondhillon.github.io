@@ -105,9 +105,9 @@ a{text-decoration: underline;}
     html{overflow-x: hidden}
     /*Change Parallax to use smaller images*/
     .parallax{background-attachment: scroll;}
-    #parallax1{background-image: url(img/mosaic_small.jpg);}
-    #parallax2{background-image: url(img/moon4_small2.jpg);}
-    #parallax3{background-image: url(img/blur_small.jpg);}
+    #parallax1{background-image: url(../img/mosaic_small.jpg) !important;}
+    #parallax2{background-image: url(../img/moon4_small2.jpg) !important; }
+    #parallax3{background-image: url(../img/blur_small.jpg) !important;}
     
     /*Change Navbar to become hamburger menu*/
     .topnav a:not(:last-child) {
