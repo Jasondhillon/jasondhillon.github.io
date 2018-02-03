@@ -8,42 +8,52 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <style>
     /*Above the fold*/
-    html, body{width:100%; height: 100%; font-family: 'Ubuntu', sans-serif; color: whitesmoke;}
+      html, body{width:100%; height: 100%; font-family: 'Ubuntu', sans-serif; color: whitesmoke;}
+
+      .parallax{
+      height:110%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -5;
+      }
+
       .topnav {
-          position: absolute;
-          overflow: hidden;
-          }
+      position: absolute;
+      overflow: hidden;
+      }
 
-          .topnav a {
-          float: left;
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 22px 21px;
-          text-decoration: none;
-          text-shadow: 0px 0px 10px black;
-          font-size: 20px;
-          }
+      .topnav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 22px 21px;
+      text-decoration: none;
+      text-shadow: 0px 0px 10px black;
+      font-size: 20px;
+      }
 
 
-          .topnav a:hover {
-          background-color: #ddd;
-          color: black;
-          text-shadow: none;
-          }
+      .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      text-shadow: none;
+      }
 
-          .topnav .icon {
-          display: none;
-          color: white;
-          }
+      .topnav .icon {
+      display: none;
+      color: white;
+      }
 
-        #welcome{
-            text-align: center;
-            position: absolute;
-            left:0;
-            width:100%; 
-            top:50%;
-        }
+      #welcome{
+      text-align: center;
+      position: absolute;
+      left:0;
+      width:100%; 
+      top:50%;
+    }
 
     /*Mobile Media Query*/
       @media screen and (max-width:770px){
@@ -82,15 +92,6 @@
             display: block;
             text-align: left;
         }
-      
-      .parallax{
-            height:110%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            z-index: -5;
-        }
       }
   </style>
   <!-- Async Script -->
@@ -117,7 +118,7 @@
 
 <body>
 <!-- Parallax/Navbar -->
-  <div id="parallax1" class="parallax"  style="background-image: url(img/mosaic.JPG);" >
+  <div id="parallax1" class="parallax"  style="height:110%; background-image: url(img/mosaic.JPG);" >
 
     <nav class="topnav" id="myTopnav">
       <a href="">Home</a> 
