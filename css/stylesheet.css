@@ -99,6 +99,15 @@ a{text-decoration: underline;}
     table.footer{
         width: 100%; table-layout: fixed
     }
+
+/*SkypeBot iframe*/
+iframe{
+    background-color: #111;
+    width: inherit;
+    height: 2em;
+    margin: 0;
+}
+
 /*Mobile Media Query*/
     @media screen and (max-width:770px){
     html{overflow-x: hidden}
