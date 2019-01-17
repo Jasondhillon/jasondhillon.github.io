@@ -102,10 +102,10 @@ a{text-decoration: underline;}
 
 /*SkypeBot iframe*/
 iframe{
-    background-color: #111;
-    width: inherit;
-    height: 2em;
-    margin: 0;
+    background-color: #111 !important;
+    width: inherit !important;
+    height: 2em !important;
+    margin: 0 !important;
 }
 
 /*Mobile Media Query*/
