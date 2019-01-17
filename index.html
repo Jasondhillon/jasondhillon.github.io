@@ -175,6 +175,14 @@
 
     <div id="welcome">
       <p id="welcometext">welcome</p>
+
+      <script>
+      var x = document.getElementById("welcometext");
+      var y = new Date().getHours();
+       if(y<12) x.innerHTML = "Good Morning";
+       else if(y==12) x.innerHTML = "Welcome";
+       else x.innerHTML = "Good Afternoon";
+      </script>
     </div>
 
   </div>
@@ -343,8 +351,8 @@
 
 
 <!-- Skype Bot -->
-<span class="skype-button bubble " data-bot-id="2c2a7e41-040a-4fcd-b10a-2480ac3c488e"></span>
-<script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+  <span class="skype-button bubble " data-bot-id="2c2a7e41-040a-4fcd-b10a-2480ac3c488e"></span>
+  <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
 <!-- Parallax -->
   <div id="parallax3" class="parallax" style="background-image: url(img/blur.JPG);">
   </div>
