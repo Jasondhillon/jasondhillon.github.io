@@ -24,7 +24,14 @@ a{text-decoration: underline;}
         letter-spacing: 5px;
         padding: 20px;
     }
-        
+    
+    #quote{
+        text-align: center;
+        width:40%; white-space:pre-line;
+        margin: 0 auto; 
+        font-size: 20px; 
+        color: #777
+    }
 
 /*Navbar*/
     .topnav {
@@ -197,7 +204,6 @@ iframe{
 
     #quote{
         width:100% !important;
-        
     }
 }
 @media screen and(max-width: 1090px){

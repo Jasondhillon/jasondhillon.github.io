@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <META NAME="robots" CONTENT="noindex,nofollow">
+  <style>
+    html, body{width:100%; height: 100%; font-family: 'Lato', sans-serif; color: #ddd;}
+    #parallax2{background-image: url(images/moon4.jpg); height: 110%}
+    #parallax3{background-image: url(images/blur.jpg); height: 110%}
+    #welcome{top:50%;}
+    /* Navbar */
+      .topnav {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+
+      }
+
+      .topnav a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 22px 21px;
+        text-decoration: none;
+        text-shadow: 0px 0px 10px black;
+        font-size: 20px;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        text-shadow: none;
+      }
+
+      .topnav .icon {
+        display: none;
+        color: white;
+      }
+    /*Other*/
+      #welcome{
+        text-align: center; 
+        position: absolute; 
+        left:0; 
+        right:0; 
+        margin: 0 auto; 
+        display:block
+      }
+      #welcometext{
+        opacity: 1; 
+        position: absolute; 
+        left:0; 
+        right:0; 
+        text-transform:uppercase;
+        background-color: rgba(51, 49, 49, 0.48);
+        border: 2px solid #282E34;
+        border-radius: 5px;
+        width:250px; text-align: center; 
+        font-size: 30px; 
+        letter-spacing: 10px; 
+        padding: 20px; 
+        margin:0 auto;
+      }
+      #welcomelogo{
+        display: none;
+      }
+
+      .moon{
+        top:18em;
+      }
+
+      .moontext{
+        font-size: 1.25em;
+      }
+
+      #text1{
+        text-shadow: 2px 2px #282E34;
+        margin:0;
+      }
+
+      table{
+        width:100%;
+        margin: 0 auto;
+      }
+
+      #smalltable{
+        display: none;
+      }
+
+      td.topstories{
+        padding: 10px;
+        text-align: center;
+      }
+
+      .caption{
+        width:100%;
+      }
+
+      .caption:hover {
+        color: goldenrod;
+      }
+
+      .footer{
+        height:200px;
+        background-color:#282E34;
+      }
+    @media screen and (max-width:770px){
+      html{overflow-x: hidden}
+      .parallax{background-attachment: scroll;}
+      #parallax2{background-image: url(images/moon4.jpg);}
+      #parallax3{background-image: url(images/blur.jpg);}
+
+      .topnav a:not(:last-child) {
+        display: none;
+      }
+
+      .topnav a:first-child {
+        display: none;
+      }
+
+
+      .topnav{
+        min-height:100px;
+        position: relative;
+      }
+
+      .topnav a.icon {
+        position: absolute;
+        padding: 20px;
+        right: 0;
+        display: block;
+      }
+
+      .topnav a:hover{
+        background-color: unset;
+        color:white;
+      }
+
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width:unset;
+      }
+
+      .topnav.responsive a:not(:first-child) {
+        float: none;
+        color:white;
+        display: block;
+        text-align: left;
+        width:350px;
+      }
+      .topnav.responsive a:last-child {
+        width: unset;
+      }
+      .topnav.responsive a:hover {
+          background-color: unset;
+          color: rgba(201, 180, 87, 0.88);
+          text-shadow: 0px 0px 10px black;
+        }
+
+      .moon{
+        top:150px;
+      }
+
+      .moontext{
+        font-size: 1em;
+        width: 45%;
+     }
+
+     #text1{
+       display: none;
+     }
+
+     #welcometext{
+       border: none;
+     }
+
+     #welcomelogo{
+       display: block;
+       width:100%;
+     }
+
+     #welcome{
+       top:25%;
+      
+     }
+
+     #welcometext{
+       background-color: initial;
+       padding: 0;
+     }
+
+     #largetable{
+        display: none;
+      }
+
+      #smalltable{
+        display: block;
+      }
+     
+
+    }
+  </style>
+
+  <!-- Async Script -->
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+</head>
+
+<body>
+<!-- Parallax -->
+  <div id="parallax1" class="parallax" style=" z-index: 1; height:110%; >
+  <video class="videoparallax" autoplay loop muted>
+    <source src="images/source.webm">
+  </video>
+      <nav class="topnav" id="myTopnav">
+          <a style="float:left"><img src="images/logo2.png"></a>
+        <div style="float:right">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Photos</a>
+          <a href="">Contact</a>
+          <a href="../index.html">Alt Site</a>
+          <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction();">&#9776;</a></li>
+        </div>
+      </nav>
+
+      <script>
+          function myFunction() {
+            var temp;
+            var temp2;
+            clearInterval(temp);
+            clearInterval(temp2);
+
+            var x = document.getElementById("myTopnav");
+            var y = document.getElementById("welcometext");
+
+            if (x.className === "topnav") {
+              x.className += " responsive";
+
+              y.style.opacity = 1;
+              var temp = setInterval(function(){
+                if(y.style.opacity<= 0){
+                  y.style.opacity = 0;
+                  clearInterval(temp);
+
+                }else{
+                  y.style.opacity-=.1;
+                  console.log("subtracting");
+                }
+              }, 10);
+            
+              
+
+            } else {
+              x.className = "topnav";
+              y.style.opacity = 0;
+                var temp2 = setInterval(function(){
+                  if(y.style.opacity>= 1){
+                    y.style.opacity = 1;
+                    clearInterval(temp2);
+
+                  }else{
+                    y.style.opacity = parseFloat(y.style.opacity) + .05;
+                    console.log("adding");
+                  }
+                }, 10);
+              
+            }
+          }
+      </script>
+
+    <div id= "welcome">
+      <div id="welcometext">
+        <p id="text1">welcome</p>
+        <img id="welcomelogo" src="images/logo2.png">
+      </div>
+    </div>
+
+  </div>
+
+<!-- Top Stories  -->
+  <div style="background-color: white; padding: 80px 20px; color: #444; font-size:1.25em">
+    <h1 style="text-align: center; color: #444; text-transform: uppercase;">Top Stories</h1>
+    <table id="largetable">
+      <tr>
+        <td class="topstories"><a href=""><img src="images/football1.jpg" style="width:100%; max-width: 500px"></td></a>
+        <td class="topstories"><a href=""><img src="images/football2.jpg" style="width:100%; max-width: 500px"></td></a>
+        <td class="topstories"><a href=""><img src="images/football3.jpg" style="width:100%; max-width: 500px"></td></a>
+      </tr>
+
+      <tr>
+          <td class="topstories" style="width:33%"><a href=""><p class="caption" >UCF Wins First Game of the Season</p></td></a>
+          <td class="topstories" style="width:33%"><a href=""><p class="caption">UCF Gets ready for the Season with New Uniforms</p></td></a>
+          <td class="topstories" style="width:33%"><a href=""><p class="caption">UCF Welcomes New Player Adrias Konrega to the Team</p></td></a>
+        </tr>
+    </table>
+
+    <table id="smalltable">
+        <tr>
+          <td class="topstories"><img src="images/football1.jpg" style="width:100%;"></td>
+          <td class="topstories"><p style="width:100%; text-align:left;">UCF Wins First Game of the Season</p></td>
+        </tr>
+
+        <tr>
+          <td class="topstories"><img src="images/football2.jpg" style="width:100%;"></td>
+          <td class="topstories"><p style="width:100%; text-align:left;">UCF Gets ready for the Season with New Uniforms</p></td>
+        </tr>
+        <tr>
+          <td class="topstories"><img src="images/football3.jpg" style="width:100%;"></td>
+          <td class="topstories"><p style="width:100%; text-align:left;">UCF Welcomes New Player Adrias Konrega to the Team</p></td>
+        </tr>
+      </table>
+  </div>
+<!-- Parallax -->
+  <div id="parallax2" class="parallax">
+    <div class="moon" style="position: relative; left:50px; width:40%;">
+      <p class="moontext" style="position: absolute; text-transform:uppercase; background-color:#282E34; width:100%; letter-spacing: 5px; padding: 20px;">
+        "I think we’re pretty refreshed, and we’re ready to get some good games in.<br><i>-F Kayla Adamek"</i></p>
+    </div>
+  </div>
+  
+<!-- Ad -->
+  <div style="background-color: #282E34; padding-top: 50px; padding-bottom:50px">
+    <img src="images/bobbleheads-ad-1.png" style="margin: 0 auto; display:block">
+  </div>
+
+
+<!-- Parallax -->
+  <div id="parallax3" class="parallax">
+    <div class="moon" style="position: relative; left:50%; width:40%;">
+      <p class="moontext" style="position: absolute; text-transform:uppercase; background-color:#282E34; width:100%; letter-spacing: 3px; padding: 20px;">
+          <i>Providing in-depth and comprehensive coverage of all Knights sports, all the time.</p></i>
+    </div>
+  </div>
+<!-- Footer -->
+  <div class="footer">
+    <img style="float:left; padding:70px 0 0 20px;" src="images/logo2.png">
+  </div>
+</body>
+</html> 

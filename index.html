@@ -121,15 +121,15 @@
 
     <nav class="topnav" id="myTopnav">
       <a href="">Home</a> 
-      <a href="photos/index.html">Photos</a>
-      <a href="about/index.html">About</a>
+      <a href="website/index.html">Websites</a>
+      <a href="java/index.html">Java</a>
       <a href="contact/index.html">Contact</a>
-      <a href="alt/index.html">Alt Site</a>
       <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction();">&#9776;</a>
   </nav>
 
       <script>
-          function myFunction() {
+          function myFunction() 
+          {
             var temp;
             var temp2;
             clearInterval(temp);
@@ -138,32 +138,41 @@
             var x = document.getElementById("myTopnav");
             var y = document.getElementById("welcometext");
 
-            if (x.className === "topnav") {
+            if (x.className === "topnav") 
+            {
               x.className += " responsive";
 
               y.style.opacity = 1;
-              var temp = setInterval(function(){
-                if(y.style.opacity<= 0){
+              var temp = setInterval(function()
+              {
+                if(y.style.opacity<= 0)
+                {
                   y.style.opacity = 0;
                   clearInterval(temp);
 
-                }else{
+                }
+                else
+                {
                   y.style.opacity-=.1;
                   console.log("subtracting");
                 }
               }, 10);
-            
-              
 
-            } else {
+            } 
+            else 
+            {
               x.className = "topnav";
               y.style.opacity = 0;
-                var temp2 = setInterval(function(){
-                  if(y.style.opacity>= 1){
+                var temp2 = setInterval(function()
+                {
+                  if(y.style.opacity>= 1)
+                  {
                     y.style.opacity = 1;
                     clearInterval(temp2);
 
-                  }else{
+                  }
+                  else
+                  {
                     y.style.opacity = parseFloat(y.style.opacity) + .05;
                     console.log("adding");
                   }
@@ -173,29 +182,35 @@
           }
       </script>
 
-    <div id="welcome">
-      <p id="welcometext">welcome</p>
+  <div id="welcome">
+    <p id="welcometext">welcome</p>
 
-      <script>
-      var x = document.getElementById("welcometext");
-      var y = new Date().getHours();
-       if(y<12) x.innerHTML = "Good Morning";
-       else if(y==12) x.innerHTML = "Welcome";
-       else x.innerHTML = "Good Afternoon";
-      </script>
-    </div>
+    <script>
+    var x = document.getElementById("welcometext");
+    var y = new Date().getHours();
+      if(y<12) x.innerHTML = "Good Morning";
+      else if(y==12) x.innerHTML = "Welcome";
+      else x.innerHTML = "Good Afternoon";
+    </script>
+  </div>
 
   </div>
 
 <!-- Quote  -->
   <div style="background-color: white; padding: 80px 50px; line-height: 30px;">
-    <h1 style="text-align: center; color: #444; text-transform: uppercase;">The Road Not Taken</h1>
-    <p id="quote" style="text-align: center; width:40%; white-space:pre-line; margin: 0 auto; font-size: 20px; color: #777">
-      "I shall be telling this with a sigh
-      Somewhere ages and ages hence
-      Two roads diverged in a wood, and I—
-      I took the one less traveled by,
-      And that has made all the difference."</p>
+    <h1 style="text-align: center; color: #444; text-transform: uppercase;">Jason Dhillon's Portfolio </h1>
+    <p id="quote" >
+      Hi there, welcome to my site, you will find various projects through the navbar at the top of the webpage.</p>
+      <p id="quote">
+        On this particular page of this site I am demonstrating:
+      <ul id="quote" style="text-align: left; width: 30%;">
+        <li>Pure HTML/CSS/JS written without any libraries</li>
+        <li>Asynchronous Loading of CSS</li>
+        <li>HTML parallax effect</li>
+        <li>Media queries which make site easy to read on smaller screens</li>
+        <li>Javascript based welcome that gives a greeting based on the time of day (morning, noon, evening)</li>
+        <li>Javascript slide-show</li>
+      </ul></p>
   </div>
 
 <!-- Parallax/Moon -->
@@ -346,14 +361,14 @@
       </div>
     </div>
   </div>
-
   <div style="background-color: #282E34; height: 100px;"></div>
 
 
 <!-- Skype Bot -->
   <span class="skype-button bubble " data-bot-id="2c2a7e41-040a-4fcd-b10a-2480ac3c488e"></span>
   <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
-<!-- Parallax -->
+
+  <!-- Parallax -->
   <div id="parallax3" class="parallax" style="background-image: url(img/blur.JPG);">
   </div>
 

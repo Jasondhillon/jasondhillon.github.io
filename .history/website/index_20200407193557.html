@@ -1,0 +1,157 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <META NAME="robots" CONTENT="noindex,nofollow">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+
+<body>
+<!-- NavBar -->
+    <nav class="topnav" style="background-color: #282E34" id="myTopnav">
+        <a href="../index.html">Home</a>
+        <a href="../website/index.html">Websites</a>
+        <a href="../about/index.html">About</a>
+        <a href="../contact/index.html">Contact</a>
+        <a href="../alt/index.html">Alt Site</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction();">&#9776;</a>
+    </nav>
+    <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                var y = document.getElementById("About_header");
+                if (x.className === "topnav") {
+                x.className += " responsive";
+                y.style.top = "400px";
+                } else {
+                x.className = "topnav";
+                y.style.top = "100px";
+                }
+            }
+        </script>
+
+
+<!-- Content -->
+  <div style="height:100%; width:100%; background-color:#282E34;">
+    <div style="height:90px; width:100%; background-color:#282E34;"></div>
+    <h1 style="padding-left:50px;" id="About_header">Websites</h1>
+    <ul style="padding-left:80px;">
+      <li >All photos were taken by myself</li>
+    </ul>
+  </div>
+
+  <!-- Parallax -->
+  <div class="parallax"  id="parallax1" style="height: 110%;" >
+    <video class="videoparallax" controls loop muted>
+      <source src="../projects/planes.mp4">
+    </video>
+        <!-- <nav class="topnav" id="myTopnav">
+            <a style="float:left"><img src="images/logo2.png"></a>
+          <div style="float:right">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Photos</a>
+            <a href="">Contact</a>
+            <a href="../index.html">Alt Site</a>
+            <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction();">&#9776;</a></li>
+          </div>
+        </nav> -->
+  
+        <!-- <script>
+            function myFunction() {
+              var temp;
+              var temp2;
+              clearInterval(temp);
+              clearInterval(temp2);
+  
+              var x = document.getElementById("myTopnav");
+              var y = document.getElementById("welcometext");
+  
+              if (x.className === "topnav") {
+                x.className += " responsive";
+  
+                y.style.opacity = 1;
+                var temp = setInterval(function(){
+                  if(y.style.opacity<= 0){
+                    y.style.opacity = 0;
+                    clearInterval(temp);
+  
+                  }else{
+                    y.style.opacity-=.1;
+                    console.log("subtracting");
+                  }
+                }, 10);
+              
+                
+  
+              } else {
+                x.className = "topnav";
+                y.style.opacity = 0;
+                  var temp2 = setInterval(function(){
+                    if(y.style.opacity>= 1){
+                      y.style.opacity = 1;
+                      clearInterval(temp2);
+  
+                    }else{
+                      y.style.opacity = parseFloat(y.style.opacity) + .05;
+                      console.log("adding");
+                    }
+                  }, 10);
+                
+              }
+            }
+        </script> -->
+  
+      <!-- <div id= "welcome">
+        <div id="welcometext">
+          <p id="text1">welcome</p>
+          <img id="welcomelogo" src="images/logo2.png">
+        </div>
+      </div> -->
+  
+    </div>
+
+<!-- Footer -->
+  <footer class="footer">
+    <table class="footer" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td>
+          <p class="footer">SOCIAL</p>
+          <ul class="footer">
+            <li class="footer"><a  class="footer" href="https://www.facebook.com/"> <img src="../img/facebook.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a  class="footer" href="https://twitter.com/"> <img src="../img/twitter.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a class="footer" href="https://plus.google.com/+"> <img src="../img/googleplus.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a class="footer" href="https://www.instagram.com//"> <img src="../img/instagram.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a class="footer" href="https://www.youtube.com/"> <img src="../img/youtube.svg" alt="" width="50px" height="50px"></li>
+          </ul>
+        </td>
+
+        <!--Desktop-->
+        <td id="desktop">
+            <h4>You can contact me here</h4>
+            <h4><img id="icon" src="../img/location2.png">Orlando, FL</h4>
+            <h4><img id="icon" src="../img/phone2.png"><a style="color:dodgerblue" href="tel:">1-407-407-0000</h4></a></li>
+            <h4><img id="icon" src="../img/mail2.png"><a style="color:dodgerblue" href="mailto:">email@gmail.com</a></h4>
+        </td>
+      </tr>
+
+      <!--Mobile-->
+      <tr>
+        <td id="mobile">
+          <ul style="margin: 0 auto; width: 100%; padding: 20px;">
+            <li class="footer" style="width:100%"><h4>You can contact me here</h4></li>
+            <li class="footer" style="width:100%"><h4><img id="icon" src="../img/location2.png">Orlando, FL</h4></li>
+            <li class="footer" style="width:100%"><h4><img id="icon" src="../img/phone2.png"><a style="color:dodgerblue" href="tel:">1-407-407-0000</h4></a></li>
+            <li class="footer" style="width:100%"><h4><img id="icon" src="../img/mail2.png"><a style="color:dodgerblue" href="mailto:">email@gmail.com</a></h4></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+  </footer>
+</body>
+</html>

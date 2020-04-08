@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    /*Above the fold*/
+      html, body{width:100%; height: 100%; font-family: 'Ubuntu', sans-serif; color: whitesmoke;}
+
+      .parallax{
+      height:110%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -5;
+      }
+
+      .topnav {
+      position: absolute;
+      overflow: hidden;
+      }
+
+      .topnav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 22px 21px;
+      text-decoration: none;
+      text-shadow: 0px 0px 10px black;
+      font-size: 20px;
+      }
+
+
+      .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      text-shadow: none;
+      }
+
+      .topnav .icon {
+      display: none;
+      color: white;
+      }
+
+      #welcome{
+      text-align: center;
+      position: absolute;
+      left:0;
+      width:100%; 
+      top:40%;
+    }
+
+    /*Mobile Media Query*/
+      @media screen and (max-width:770px){
+        html{overflow-x: hidden}
+        /*Change Parallax to use smaller images*/
+        .parallax{background-attachment: scroll;}
+        #parallax1{background-image: url(../img/mosaic_small.jpg) !important;}
+        #parallax2{background-image: url(../img/moon4_small2.jpg) !important; }
+        #parallax3{background-image: url(../img/blur_small.jpg) !important;}
+        
+        /*Change Navbar to become hamburger menu*/
+        .topnav a:not(:last-child) {
+            display: none;
+        }
+
+        .topnav{
+            min-height:100px;
+            position: relative;
+        }
+        .topnav a.icon {
+            position: absolute;
+            right: 0;
+            display: block;
+            
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+      }
+  </style>
+  <!-- Async Script -->
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+</head>
+
+<body>
+<!-- Parallax/Navbar -->
+  <div id="parallax1" class="parallax" style=" z-index: 1; height:110%; background-image: url(img/mosaic.JPG);" >
+    <!--p style="color:white; height:110%; z-index: -599; position: absolute;"> loading </p-->
+
+    <nav class="topnav" id="myTopnav">
+      <a href="">Home</a> 
+      <a href="photos/index.html">Photos</a>
+      <a href="about/index.html">About</a>
+      <a href="contact/index.html">Contact</a>
+      <a href="alt/index.html">Alt Site</a>
+      <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction();">&#9776;</a>
+  </nav>
+
+      <script>
+          function myFunction() 
+          {
+            var temp;
+            var temp2;
+            clearInterval(temp);
+            clearInterval(temp2);
+
+            var x = document.getElementById("myTopnav");
+            var y = document.getElementById("welcometext");
+
+            if (x.className === "topnav") 
+            {
+              x.className += " responsive";
+
+              y.style.opacity = 1;
+              var temp = setInterval(function()
+              {
+                if(y.style.opacity<= 0)
+                {
+                  y.style.opacity = 0;
+                  clearInterval(temp);
+
+                }
+                else
+                {
+                  y.style.opacity-=.1;
+                  console.log("subtracting");
+                }
+              }, 10);
+
+            } 
+            else 
+            {
+              x.className = "topnav";
+              y.style.opacity = 0;
+                var temp2 = setInterval(function()
+                {
+                  if(y.style.opacity>= 1)
+                  {
+                    y.style.opacity = 1;
+                    clearInterval(temp2);
+
+                  }
+                  else
+                  {
+                    y.style.opacity = parseFloat(y.style.opacity) + .05;
+                    console.log("adding");
+                  }
+                }, 10);
+              
+            }
+          }
+      </script>
+
+    <div id="welcome">
+      <p id="welcometext">welcome</p>
+
+      <script>
+      var x = document.getElementById("welcometext");
+      var y = new Date().getHours();
+       if(y<12) x.innerHTML = "Good Morning";
+       else if(y==12) x.innerHTML = "Welcome";
+       else x.innerHTML = "Good Afternoon";
+      </script>
+    </div>
+
+  </div>
+
+<!-- Quote  -->
+  <div style="background-color: white; padding: 80px 50px; line-height: 30px;">
+    <h1 style="text-align: center; color: #444; text-transform: uppercase;">Jason Dhillon's Portfolio </h1>
+    <p id="quote" >
+      Hi there, welcome to my site, you will find various projects through the navbar at the top of the webpage.</p>
+      <p id="quote">
+        On this particular page of this site I am demonstrating:
+      <ul id="quote" style="text-align: left;">
+        <li>Pure HTML/CSS/JS written without any libraries</li>
+        <li> Javascript based welcome that gives a greeting based on the time of day (morning, evening, night)</li>
+        <li>Parallax Effect</li>
+        <li>Asynchronous Loading of CSS</li>
+        <li>Javascript Slide show</li>
+        <li>Links in the footer which open </li>
+      </ul></p>
+  </div>
+
+<!-- Parallax/Moon -->
+  <div id="parallax2" class="parallax" style="background-image: url(img/moon4.JPG);">
+    <div style="position: relative; left:50px; top:100px; width:50%;">
+      <p id="moontext">
+        "I am the Alpha and the Omega,
+          the First and the Last,
+            the Beginning and the End."</p>
+      </div>
+  </div>
+  
+<!-- Slide Show -->
+  <div style="background-color: #282E34; height: 100px;"></div>
+  <div style="background-color: #282E34;">
+    <div class="w3-content w3-display-container" style="height:350px; overflow:hidden">
+      <img class="mySlides" src="img/IMG_0911.JPG" style="z-Index:3">
+      <img class="mySlides" src="img/IMG_0810.JPG" style="z-Index:2">
+      <img class="mySlides" src="img/IMG_1858.JPG" style="z-Index:1">
+      
+    <!-- Slide Show Buttons -->
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%; z-index:4;">
+        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+      
+      <!--Slide Show Script -->
+        <script>
+          var slideIndex = 0;
+          var j = null;
+          document.getElementsByClassName("demo")[slideIndex].className += " w3-white";
+          var looper = setInterval(function(){if(j==null){showNextDivs(1+slideIndex);}}, 5000);
+        
+          function plusDivs(n) {
+            if(looper!== null){
+              clearInterval(looper);
+              looper = null;
+            }
+            
+            if(j==null){ 
+            showNextDivs(n+slideIndex);
+            }
+          }
+          function currentDiv(n) {
+            if(looper!== null){
+              clearInterval(looper);
+              looper = null;
+            }
+        
+            if(j==null){ 
+              showDivs(n);
+            }
+          }
+          //////////////////////////////////////////////////////
+          function showDivs(n) {
+            var prev = slideIndex;
+            var next = n-1;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+        
+            x[prev].style.zIndex = 3;
+        
+            x[next].style.zIndex = 2;
+        
+            for(var i = 0; i<x.length; i++){
+              if((i!== prev) && (i!==next)){
+                x[i].style.zIndex = 1;
+              }
+              
+            }
+              var opc = 1;
+              j = setInterval(function(){
+                  if (opc <= 0) {
+                    x[next].style.zIndex = 3;
+                    x[prev].style.zIndex = 2;
+                    x[prev].style.opacity = 1;
+                      clearInterval(j);
+                      j=null;
+                  } else {
+                      opc-=.01;
+        
+                      x[prev].style.opacity = opc;
+                  }
+              }, 10);
+        
+              slideIndex = next;
+          
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+        
+            dots[next].className += " w3-white";
+            x[prev].style.opacity = 1;
+          }
+          ////////////////////////////////////////////////////
+          function showNextDivs(n) {
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+        
+            var prev = slideIndex;
+            var next = n;
+            if (n == -1) {next = 2}
+            if (n == 3) {next = 0}
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+        
+            x[prev].style.zIndex = 3;
+        
+            x[next].style.zIndex = 2;
+        
+            for(var i = 0; i<x.length; i++){
+              if((i!== prev) && (i!==next)){
+                x[i].style.zIndex = 1;
+              }
+              
+            }
+              var opc = 1;
+              j = setInterval(function(){
+                  if (opc <= 0) {
+                    x[next].style.zIndex = 3;
+                    x[prev].style.zIndex = 2;
+                    x[prev].style.opacity = 1;
+                      clearInterval(j);
+                      j=null;
+                  } else {
+                      opc-=.01;
+        
+                      x[prev].style.opacity = opc;
+                  }
+              }, 10);
+        
+              slideIndex = next;
+          
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+        
+            dots[next].className += " w3-white";
+            x[prev].style.opacity = 1;
+        
+            console.log("Previous: " + prev + "\nslideIndex: " + slideIndex)
+          }
+        </script>
+
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #282E34; height: 100px;"></div>
+
+
+<!-- Skype Bot -->
+  <span class="skype-button bubble " data-bot-id="2c2a7e41-040a-4fcd-b10a-2480ac3c488e"></span>
+  <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+
+  <!-- Parallax -->
+  <div id="parallax3" class="parallax" style="background-image: url(img/blur.JPG);">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <table class="footer" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td>
+          <p class="footer">SOCIAL</p>
+          <ul class="footer">
+            <li class="footer"><a  class="footer" href="https://www.facebook.com/"> <img src="img/facebook.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a  class="footer" href="https://twitter.com/"> <img src="img/twitter.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a class="footer" href="https://plus.google.com/+"> <img src="img/googleplus.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a class="footer" href="https://www.instagram.com//"> <img src="img/instagram.svg" alt="" width="50px" height="50px"></li>
+            <li class="footer"><a class="footer" href="https://www.youtube.com/"> <img src="img/youtube.svg" alt="" width="50px" height="50px"></li>
+          </ul>
+        </td>
+
+        <!--Desktop-->
+        <td id="desktop">
+            <h4>You can contact me here</h4>
+            <h4><img id="icon" src="img/location2.png">Orlando, FL</h4>
+            <h4><img id="icon" src="img/phone2.png"><a style="color:dodgerblue" href="tel:">1-407-407-0000</h4></a></li>
+            <h4><img id="icon" src="img/mail2.png"><a style="color:dodgerblue" href="mailto:">email@gmail.com</a></h4>
+        </td>
+      </tr>
+
+      <!--Mobile-->
+      <tr>
+        <td id="mobile">
+          <ul style="margin: 0 auto; width: 100%; padding: 20px;">
+            <li class="footer" style="width:100%"><h4>You can contact me here</h4></li>
+            <li class="footer" style="width:100%"><h4><img id="icon" src="img/location2.png">Orlando, FL</h4></li>
+            <li class="footer" style="width:100%"><h4><img id="icon" src="img/phone2.png"><a style="color:dodgerblue" href="tel:">1-407-407-0000</h4></a></li>
+            <li class="footer" style="width:100%"><h4><img id="icon" src="img/mail2.png"><a style="color:dodgerblue" href="mailto:">email@gmail.com</a></h4></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+  </footer>
+
+</body>
+</html> 
